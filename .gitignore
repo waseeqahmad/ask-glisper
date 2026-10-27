@@ -1,0 +1,21 @@
+.env
+.env.*
+!.env.example
+!.env.server.example
+*.dmg
+*.jar
+.DS_Store
+__pycache__/
+.venv/
+.claude/
+
+# private planning notes: never in the public repo
+HACKATHON_CONTEXT.md
+claude.md
+CLAUDE.md
+SUBMISSION.md
+
+# runtime state
+logs/
+data/memory/
+node_modules/

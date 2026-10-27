@@ -1,0 +1,132 @@
+{
+  "run_id": "20261027-140210-f6fde2",
+  "question": "Why do we lose on ChatGPT?",
+  "answer": "Lahore Loom leads ChatGPT first-place mentions with 61.1% share (44 occurrences). In answers where Lahore Loom does not win, third-party domains such as dawn.com (cited in 50.0% of losses vs 43.2% of wins), daraz.pk (40.9% vs 38.6%), lahorestyleguide.pk (18.2% vs 11.4%), and reddit.com (9.1% vs 0%) appear more frequently. Winning answers always cite lahoreloom.pk (100% of wins, 0% of losses).",
+  "action": "Pitch a brand feature to dawn.com this week to secure citations on the domain that appears in 50.0% of losing ChatGPT answers.",
+  "confidence": "medium",
+  "score": 9,
+  "passed": true,
+  "retries": 1,
+  "evidence": [
+    {
+      "skill": "competitor_gap",
+      "sql": "SELECT winner AS competitor,\n       COUNT(*) AS frequency,\n       ROUND(100.0 * COUNT(*) / (SELECT COUNT(*) FROM GLISPER_DEMO.answers WHERE engine = 'chatgpt'), 1) AS share_pct\nFROM GLISPER_DEMO.answers\nWHERE engine = 'chatgpt'\n  AND winner <> 'Kurta Co'\nGROUP BY winner\nORDER BY frequency DESC LIMIT 200",
+      "rows": [
+        {
+          "competitor": "Lahore Loom",
+          "frequency": 44,
+          "share_pct": 61.1
+        },
+        {
+          "competitor": "Threadline",
+          "frequency": 9,
+          "share_pct": 12.5
+        },
+        {
+          "competitor": "Rang Bazaar",
+          "frequency": 7,
+          "share_pct": 9.7
+        },
+        {
+          "competitor": "Silk Route Studio",
+          "frequency": 6,
+          "share_pct": 8.3
+        }
+      ],
+      "backend": "zetaris"
+    },
+    {
+      "skill": "source_gap",
+      "sql": "WITH filtered AS (\n  SELECT a.result_id, a.run_date, a.engine, a.status\n  FROM GLISPER_DEMO.answers a\n  WHERE a.engine = 'chatgpt'\n    AND a.winner <> 'Kurta Co'\n),\nanswer_domains AS (\n  SELECT DISTINCT f.result_id, f.run_date, f.status, s.domain\n  FROM filtered f\n  JOIN GLISPER_DEMO.answer_sources s\n    ON f.result_id = s.result_id\n   AND f.run_date = s.run_date\n   AND f.engine = s.engine\n),\ntotals AS (\n  SELECT\n    SUM(CASE WHEN status = 'won' THEN 1 ELSE 0 END) AS total_won,\n    SUM(CASE WHEN status <> 'won' THEN 1 ELSE 0 END) AS total_not_won\n  FROM (SELECT DISTINCT result_id, run_date, status FROM filtered) t\n),\ndomain_stats AS (\n  SELECT\n    domain,\n    SUM(CASE WHEN status = 'won' THEN 1 ELSE 0 END) AS won_citations,\n    SUM(CASE WHEN status <> 'won' THEN 1 ELSE 0 END) AS not_won_citations\n  FROM (SELECT DISTINCT result_id, run_date, status, domain FROM answer_domains) d\n  GROUP BY domain\n)\nSELECT\n  ds.domain,\n  ROUND(100.0 * ds.not_won_citations / t.total_not_won, 1) AS not_won_pct,\n  ROUND(100.0 * ds.won_citations / t.total_won, 1) AS won_pct\nFROM domain_stats ds\nCROSS JOIN totals t\nWHERE t.total_not_won > 0 AND t.total_won > 0\nORDER BY not_won_pct DESC, won_pct ASC LIMIT 200",
+      "rows": [
+        {
+          "domain": "dawn.com",
+          "not_won_pct": 50.0,
+          "won_pct": 43.2
+        },
+        {
+          "domain": "threadline.pk",
+          "not_won_pct": 40.9,
+          "won_pct": 0.0
+        },
+        {
+          "domain": "daraz.pk",
+          "not_won_pct": 40.9,
+          "won_pct": 38.6
+        },
+        {
+          "domain": "youtube.com",
+          "not_won_pct": 36.4,
+          "won_pct": 38.6
+        },
+        {
+          "domain": "rangbazaar.pk",
+          "not_won_pct": 31.8,
+          "won_pct": 0.0
+        },
+        {
+          "domain": "instagram.com",
+          "not_won_pct": 31.8,
+          "won_pct": 36.4
+        },
+        {
+          "domain": "silkroutestudio.pk",
+          "not_won_pct": 27.3,
+          "won_pct": 0.0
+        },
+        {
+          "domain": "lahorestyleguide.pk",
+          "not_won_pct": 18.2,
+          "won_pct": 11.4
+        },
+        {
+          "domain": "reddit.com",
+          "not_won_pct": 9.1,
+          "won_pct": 0.0
+        },
+        {
+          "domain": "lahoreloom.pk",
+          "not_won_pct": 0.0,
+          "won_pct": 100.0
+        }
+      ],
+      "backend": "zetaris"
+    }
+  ],
+  "quotes": [
+    {
+      "result_id": "cf0df860-ebc9-2914-5176-a9d19a3624d6",
+      "date": "2026-10-19",
+      "engine": "chatgpt",
+      "prompt": "where to buy chikankari in Lahore",
+      "quote": "1. Threadline: trendy pret and quick delivery.",
+      "cited": "https://www.dawn.com/news/lifestyle/lahore-fashion-week-2026"
+    },
+    {
+      "result_id": "8c0b393a-1333-5bc9-bb63-5ff529310971",
+      "date": "2026-10-19",
+      "engine": "chatgpt",
+      "prompt": "new clothing brands Lahore",
+      "quote": "1. Rang Bazaar: bright festive wear at mid-range prices.",
+      "cited": "https://www.dawn.com/news/lifestyle/lahore-fashion-week-2026"
+    },
+    {
+      "result_id": "755cee2a-f8de-d777-bb1e-5ae817d821b8",
+      "date": "2026-10-19",
+      "engine": "chatgpt",
+      "prompt": "best pret wear Lahore",
+      "quote": "1. Silk Route Studio: premium silk formals.",
+      "cited": "https://www.dawn.com/news/lifestyle/lahore-fashion-week-2026"
+    }
+  ],
+  "memories_used": [
+    "Ignore Kurta Co: they only ship in Karachi, not a competitor for us"
+  ],
+  "propose_memory": null,
+  "models": [
+    "nvidia/nemotron-3-ultra-550b-a55b",
+    "nvidia/nemotron-3.5-lightning-30b-a3b"
+  ],
+  "data_label": "Simulated data (synthetic demo audit, not real engine answers)",
+  "log": "logs/20261027-140210-f6fde2.jsonl"
+}

@@ -1,0 +1,132 @@
+{
+  "run_id": "20261027-120230-296ede",
+  "question": "Who beats us on Gemini, and which sources do they get cited from?",
+  "answer": "Threadline (12.5%), Rang Bazaar (11.1%), and Silk Route Studio (9.7%) are the brands that rank first on Gemini ahead of Lahore Loom (40.3%). In answers where Lahore Loom does not win, the competitors' own domains \u2014 threadline.pk (37.5%), rangbazaar.pk (33.3%), silkroutestudio.pk (29.2%) \u2014 are cited, while they appear in 0% of winning answers. Third\u2011party sources also differ: daraz.pk shows up in 62.5% of losses versus 41.4% of wins, youtube.com in 33.3% vs 27.6%, and lahorestyleguide.pk in 20.8% vs 13.8%.",
+  "action": "Pitch a product listing or brand feature to daraz.pk this week to gain citations on the domain that appears in 62.5% of losing Gemini answers.",
+  "confidence": "medium",
+  "score": 7,
+  "passed": true,
+  "retries": 0,
+  "evidence": [
+    {
+      "skill": "competitor_gap",
+      "sql": "SELECT winner, COUNT(*) AS answers_ranked_first, ROUND(100.0 * COUNT(*) / (SELECT COUNT(*) FROM GLISPER_DEMO.answers WHERE engine = 'gemini'), 1) AS pct_of_answers FROM GLISPER_DEMO.answers WHERE engine = 'gemini' AND winner NOT IN ('Kurta Co') GROUP BY winner ORDER BY answers_ranked_first DESC LIMIT 200",
+      "rows": [
+        {
+          "winner": "Lahore Loom",
+          "answers_ranked_first": 29,
+          "pct_of_answers": 40.3
+        },
+        {
+          "winner": "Threadline",
+          "answers_ranked_first": 9,
+          "pct_of_answers": 12.5
+        },
+        {
+          "winner": "Rang Bazaar",
+          "answers_ranked_first": 8,
+          "pct_of_answers": 11.1
+        },
+        {
+          "winner": "Silk Route Studio",
+          "answers_ranked_first": 7,
+          "pct_of_answers": 9.7
+        }
+      ],
+      "backend": "zetaris"
+    },
+    {
+      "skill": "source_gap",
+      "sql": "WITH filtered AS (\n  SELECT a.result_id,\n         a.run_date,\n         a.engine,\n         a.status\n  FROM GLISPER_DEMO.answers a\n  WHERE a.engine = 'gemini'\n    AND a.winner <> 'Kurta Co'\n),\nanswer_domains AS (\n  SELECT DISTINCT f.result_id,\n         f.run_date,\n         f.status,\n         s.domain\n  FROM filtered f\n  JOIN GLISPER_DEMO.answer_sources s\n    ON f.result_id = s.result_id\n   AND f.run_date = s.run_date\n   AND f.engine = s.engine\n),\ntotals AS (\n  SELECT\n    SUM(CASE WHEN status = 'won' THEN 1 ELSE 0 END) AS total_won,\n    SUM(CASE WHEN status <> 'won' THEN 1 ELSE 0 END) AS total_not_won\n  FROM (SELECT DISTINCT result_id, run_date, status FROM filtered) t\n),\ndomain_stats AS (\n  SELECT\n    domain,\n    SUM(CASE WHEN status = 'won' THEN 1 ELSE 0 END) AS won_citations,\n    SUM(CASE WHEN status <> 'won' THEN 1 ELSE 0 END) AS not_won_citations\n  FROM (SELECT DISTINCT result_id, run_date, status, domain FROM answer_domains) d\n  GROUP BY domain\n)\nSELECT\n  ds.domain,\n  ROUND(100.0 * ds.not_won_citations / t.total_not_won, 1) AS not_won_pct,\n  ROUND(100.0 * ds.won_citations / t.total_won, 1) AS won_pct\nFROM domain_stats ds\nCROSS JOIN totals t\nWHERE t.total_not_won > 0 AND t.total_won > 0\nORDER BY not_won_pct DESC, won_pct ASC LIMIT 200",
+      "rows": [
+        {
+          "domain": "daraz.pk",
+          "not_won_pct": 62.5,
+          "won_pct": 41.4
+        },
+        {
+          "domain": "threadline.pk",
+          "not_won_pct": 37.5,
+          "won_pct": 0.0
+        },
+        {
+          "domain": "rangbazaar.pk",
+          "not_won_pct": 33.3,
+          "won_pct": 0.0
+        },
+        {
+          "domain": "youtube.com",
+          "not_won_pct": 33.3,
+          "won_pct": 27.6
+        },
+        {
+          "domain": "dawn.com",
+          "not_won_pct": 33.3,
+          "won_pct": 37.9
+        },
+        {
+          "domain": "silkroutestudio.pk",
+          "not_won_pct": 29.2,
+          "won_pct": 0.0
+        },
+        {
+          "domain": "instagram.com",
+          "not_won_pct": 29.2,
+          "won_pct": 37.9
+        },
+        {
+          "domain": "lahorestyleguide.pk",
+          "not_won_pct": 20.8,
+          "won_pct": 13.8
+        },
+        {
+          "domain": "reddit.com",
+          "not_won_pct": 12.5,
+          "won_pct": 0.0
+        },
+        {
+          "domain": "lahoreloom.pk",
+          "not_won_pct": 0.0,
+          "won_pct": 100.0
+        }
+      ],
+      "backend": "zetaris"
+    }
+  ],
+  "quotes": [
+    {
+      "result_id": "5e4c4fd1-4623-63a9-32f8-dbabb462e3e8",
+      "date": "2026-10-19",
+      "engine": "gemini",
+      "prompt": "Lahore fashion brands for students",
+      "quote": "1. Kurta Co: budget kurtas, ships across Karachi.",
+      "cited": "https://www.daraz.pk/catalog/?q=lawn+suits"
+    },
+    {
+      "result_id": "614077d3-9ec4-ea48-d773-f98d550c2fe9",
+      "date": "2026-10-19",
+      "engine": "gemini",
+      "prompt": "affordable kurta shop Lahore",
+      "quote": "1. Kurta Co: budget kurtas, ships across Karachi.",
+      "cited": "https://www.daraz.pk/catalog/?q=lawn+suits"
+    },
+    {
+      "result_id": "8972abbd-cff2-b1c4-e53f-9644b39e4df2",
+      "date": "2026-10-19",
+      "engine": "gemini",
+      "prompt": "boutique for stitched khaddar suits Lahore",
+      "quote": "1. Rang Bazaar: bright festive wear at mid-range prices.",
+      "cited": "https://www.daraz.pk/catalog/?q=lawn+suits"
+    }
+  ],
+  "memories_used": [
+    "Ignore Kurta Co: they only ship in Karachi, not a competitor for us"
+  ],
+  "propose_memory": null,
+  "models": [
+    "nvidia/nemotron-3-ultra-550b-a55b",
+    "nvidia/nemotron-3.5-lightning-30b-a3b"
+  ],
+  "data_label": "Simulated data (synthetic demo audit, not real engine answers)",
+  "log": "logs/20261027-120230-296ede.jsonl"
+}

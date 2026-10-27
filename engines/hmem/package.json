@@ -1,0 +1,10 @@
+{
+  "name": "ask-glisper-hmem",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "conformance": "tsx conformance/runner.ts",
+    "test": "tsx conformance/runner.ts && tsx test_recall.ts"
+  },
+  "devDependencies": { "tsx": "4.19.2" }
+}

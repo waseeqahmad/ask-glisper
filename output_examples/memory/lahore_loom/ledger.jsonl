@@ -1,0 +1,9 @@
+{"memoryId":"mem-1","action":"create","actor":"ask-glisper","timestamp":1793084399709,"newState":{"id":"mem-1","content":"Ignore Kurta Co: they only ship in Karachi, not a competitor for us","type":"preference","layer":"long_term","timestamp":1793084399709,"lastAccessed":1793084399709,"accessCount":0,"tags":["brand-context"],"confidence":0.9,"source":"user:approved","provenance":{"origin":"user_correction","learnedAt":1793084399709,"label":"User approved this in Ask Glisper"},"domain":"personal","namespace":"personal/profile","entities":["ignore","kurta","karachi"],"relatedTo":[]}}
+{"memoryId":"mem-1","action":"read","actor":"ask-glisper","timestamp":1793084400097,"details":{"query":"Why are we losing on Perplexity?"}}
+{"memoryId":"mem-1","action":"read","actor":"ask-glisper","timestamp":1793084400275,"details":{"query":"Who beats us on Gemini, and which sources do they get cited from?"}}
+{"memoryId":"mem-1","action":"read","actor":"ask-glisper","timestamp":1793084400433,"details":{"query":"Why do we lose on ChatGPT?"}}
+{"memoryId":"mem-1","action":"read","actor":"ask-glisper","timestamp":1793084400582,"details":{"query":"Where are we weakest across all engines?"}}
+{"memoryId":"mem-1","action":"read","actor":"ask-glisper","timestamp":1793084409602,"details":{"query":"Why are we losing on Perplexity?"}}
+{"memoryId":"mem-1","action":"read","actor":"ask-glisper","timestamp":1793084550601,"details":{"query":"Who beats us on Gemini, and which sources do they get cited from?"}}
+{"memoryId":"mem-1","action":"read","actor":"ask-glisper","timestamp":1793084730632,"details":{"query":"Why do we lose on ChatGPT?"}}
+{"memoryId":"mem-1","action":"read","actor":"ask-glisper","timestamp":1793084871600,"details":{"query":"Where are we weakest across all engines?"}}

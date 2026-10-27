@@ -1,0 +1,149 @@
+{
+  "run_id": "20261027-120000-bf2ae0",
+  "question": "Where are we weakest across all engines?",
+  "answer": "On all engines, Threadline is ranked first in 27.1% of answers, Lahore Loom in 42.7%. lahorestyleguide.pk is cited in 46.7% of answers we don't win and 10.6% of answers we win.",
+  "action": "Ask lahorestyleguide.pk to add Lahore Loom to the page it is cited for, with a link to lahoreloom.pk.",
+  "confidence": "high",
+  "score": 9,
+  "passed": true,
+  "retries": 0,
+  "evidence": [
+    {
+      "skill": "competitor_gap",
+      "sql": "SELECT winner, COUNT(*) AS answers_ranked_first, ROUND(100.0 * COUNT(*) / (SELECT COUNT(*) FROM answers WHERE 1=1), 1) AS pct_of_answers FROM answers WHERE 1=1 AND winner NOT IN ('Kurta Co') GROUP BY winner ORDER BY answers_ranked_first DESC LIMIT 200",
+      "rows": [
+        {
+          "winner": "Lahore Loom",
+          "answers_ranked_first": 123,
+          "pct_of_answers": 42.7
+        },
+        {
+          "winner": "Threadline",
+          "answers_ranked_first": 78,
+          "pct_of_answers": 27.1
+        },
+        {
+          "winner": "Rang Bazaar",
+          "answers_ranked_first": 29,
+          "pct_of_answers": 10.1
+        },
+        {
+          "winner": "Silk Route Studio",
+          "answers_ranked_first": 28,
+          "pct_of_answers": 9.7
+        }
+      ],
+      "backend": "sqlite"
+    },
+    {
+      "skill": "source_gap",
+      "sql": "SELECT domain, source_type, ROUND(100.0 * SUM(CASE WHEN status <> 'won' THEN 1 ELSE 0 END) / (SELECT COUNT(*) FROM answers WHERE 1=1 AND status <> 'won'), 1) AS pct_of_not_won_citing, ROUND(100.0 * SUM(CASE WHEN status = 'won' THEN 1 ELSE 0 END) / (SELECT COUNT(*) FROM answers WHERE 1=1 AND status = 'won'), 1) AS pct_of_won_citing, SUM(CASE WHEN status <> 'won' THEN 1 ELSE 0 END) AS not_won_answers_citing FROM answer_sources WHERE 1=1 GROUP BY domain, source_type ORDER BY not_won_answers_citing DESC LIMIT 10",
+      "rows": [
+        {
+          "domain": "daraz.pk",
+          "source_type": "marketplace",
+          "pct_of_not_won_citing": 47.3,
+          "pct_of_won_citing": 43.1,
+          "not_won_answers_citing": 78
+        },
+        {
+          "domain": "threadline.pk",
+          "source_type": "competitor_site",
+          "pct_of_not_won_citing": 47.3,
+          "pct_of_won_citing": 0.0,
+          "not_won_answers_citing": 78
+        },
+        {
+          "domain": "lahorestyleguide.pk",
+          "source_type": "listicle",
+          "pct_of_not_won_citing": 46.7,
+          "pct_of_won_citing": 10.6,
+          "not_won_answers_citing": 77
+        },
+        {
+          "domain": "dawn.com",
+          "source_type": "news",
+          "pct_of_not_won_citing": 42.4,
+          "pct_of_won_citing": 36.6,
+          "not_won_answers_citing": 70
+        },
+        {
+          "domain": "instagram.com",
+          "source_type": "social",
+          "pct_of_not_won_citing": 33.3,
+          "pct_of_won_citing": 39.0,
+          "not_won_answers_citing": 55
+        },
+        {
+          "domain": "youtube.com",
+          "source_type": "video",
+          "pct_of_not_won_citing": 31.5,
+          "pct_of_won_citing": 37.4,
+          "not_won_answers_citing": 52
+        },
+        {
+          "domain": "reddit.com",
+          "source_type": "forum",
+          "pct_of_not_won_citing": 29.7,
+          "pct_of_won_citing": 0.0,
+          "not_won_answers_citing": 49
+        },
+        {
+          "domain": "kurtaco.pk",
+          "source_type": "competitor_site",
+          "pct_of_not_won_citing": 18.2,
+          "pct_of_won_citing": 0.0,
+          "not_won_answers_citing": 30
+        },
+        {
+          "domain": "rangbazaar.pk",
+          "source_type": "competitor_site",
+          "pct_of_not_won_citing": 17.6,
+          "pct_of_won_citing": 0.0,
+          "not_won_answers_citing": 29
+        },
+        {
+          "domain": "silkroutestudio.pk",
+          "source_type": "competitor_site",
+          "pct_of_not_won_citing": 17.0,
+          "pct_of_won_citing": 0.0,
+          "not_won_answers_citing": 28
+        }
+      ],
+      "backend": "sqlite"
+    }
+  ],
+  "quotes": [
+    {
+      "result_id": "1869a217-f94d-8fcb-dba3-496ffa323f69",
+      "date": "2026-10-19",
+      "engine": "perplexity",
+      "prompt": "best eastern wear boutique in Lahore",
+      "quote": "1. Rang Bazaar: bright festive wear at mid-range prices.",
+      "cited": "https://lahorestyleguide.pk/best-boutiques-lahore-2026"
+    },
+    {
+      "result_id": "4cbc9044-6bcd-5ce7-46a5-6fe86f46f1b1",
+      "date": "2026-10-19",
+      "engine": "perplexity",
+      "prompt": "affordable kurta shop Lahore",
+      "quote": "1. Threadline: trendy pret and quick delivery.",
+      "cited": "https://lahorestyleguide.pk/best-boutiques-lahore-2026"
+    },
+    {
+      "result_id": "40afbf3f-3df5-1967-4d86-70bda2224f96",
+      "date": "2026-10-19",
+      "engine": "perplexity",
+      "prompt": "boutique for stitched khaddar suits Lahore",
+      "quote": "1. Threadline: trendy pret and quick delivery.",
+      "cited": "https://lahorestyleguide.pk/best-boutiques-lahore-2026"
+    }
+  ],
+  "memories_used": [
+    "Ignore Kurta Co: they only ship in Karachi, not a competitor for us"
+  ],
+  "propose_memory": null,
+  "models": [],
+  "data_label": "Simulated data (synthetic demo audit, not real engine answers)",
+  "log": "logs/20261027-120000-bf2ae0.jsonl"
+}

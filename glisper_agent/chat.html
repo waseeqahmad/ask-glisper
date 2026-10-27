@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ask Glisper</title>
+<!-- same fonts and tokens as Glisper (geo-frontend src/styles.css), so the standalone page and the Glisper panel match -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<style>
+  :root { --paper:#f6f6f7; --card:#fff; --ink:#0b0b0c; --mute:#5f6066; --line:#e6e6e9; --input:#dcdce0;
+          --primary:#172c4a; --primary-deep:#101e38; --tint:#e8edf3; --muted:#efeff1; --amber:#d97706;
+          --ok:#10704a; --warn:#a8741c; --bad:#d14343;
+          --sans:"Inter Tight",ui-sans-serif,system-ui,sans-serif; --mono:"Geist Mono",ui-monospace,monospace; }
+  /* radius rule: panels 8px, controls 6px, pills full */
+  * { box-sizing:border-box; } [hidden] { display:none !important; }
+  html, body { margin:0; height:100%; }
+  body { background:var(--paper); color:var(--ink); font:14px/1.55 var(--sans); -webkit-font-smoothing:antialiased; }
+  button { font:inherit; color:inherit; cursor:pointer; }
+  svg.lucide { width:16px; height:16px; stroke-width:1.75; flex:none; }
+  .app { display:grid; grid-template-columns:256px minmax(0,1fr); height:100dvh; }
+
+  /* sidebar */
+  .side { background:var(--card); border-right:1px solid var(--line); display:flex; flex-direction:column; min-height:0; }
+  .side-head { padding:16px 16px 12px; }
+  .side-head strong { font-weight:600; font-size:15px; letter-spacing:-.01em; display:flex; gap:7px; align-items:center; }
+  .side-head span { color:var(--mute); font-size:12.5px; display:block; margin-top:2px; }
+  .newchat { margin:0 12px 8px; display:flex; gap:8px; align-items:center; justify-content:center; padding:8px 12px;
+             border-radius:6px; border:1px solid var(--primary); background:var(--primary); color:#fff; font-weight:500; }
+  .newchat:hover { background:var(--primary-deep); } .newchat:active { transform:translateY(1px); }
+  nav.chats { flex:1; overflow-y:auto; padding:4px 8px; min-height:0; }
+  nav.chats p { color:var(--mute); font-size:12.5px; padding:8px; margin:0; }
+  .chat-item { display:block; width:100%; text-align:left; border:0; background:none; padding:8px 10px; border-radius:6px; }
+  .chat-item:hover { background:var(--muted); }
+  .chat-item.on { background:var(--tint); }
+  .chat-item b { display:block; font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .chat-item small { color:var(--mute); font-size:12px; }
+  .chat-item small.live { color:var(--amber); }
+  .side-foot { border-top:1px solid var(--line); padding:10px 12px 14px; font-size:13px; }
+  .side-foot summary { cursor:pointer; font-weight:500; display:flex; gap:7px; align-items:center; list-style:none; padding:4px 0; }
+  .side-foot summary::-webkit-details-marker { display:none; }
+  ul.mem { margin:6px 0 8px; padding-left:16px; color:var(--ink); max-height:160px; overflow-y:auto; }
+  ul.mem li { margin:3px 0; } ul.mem .muted { list-style:none; margin-left:-16px; }
+  .rem { display:flex; gap:6px; }
+  .rem input { flex:1; min-width:0; }
+  .datalabel { margin-top:10px; color:var(--warn); font-size:12px; }
+
+  /* conversation */
+  .conv { display:flex; flex-direction:column; min-height:0; min-width:0; }
+  .top { display:flex; align-items:center; gap:10px; padding:10px 20px; border-bottom:1px solid var(--line); background:var(--card); min-height:52px; }
+  .top h1 { font-size:14px; font-weight:600; margin:0; flex:1; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .menu { display:none; border:0; background:none; padding:4px; border-radius:6px; }
+  .seg { display:flex; background:var(--muted); border-radius:6px; padding:2px; }
+  .seg button { border:0; background:none; padding:4px 12px; border-radius:5px; font-size:13px; color:var(--mute); font-weight:500; }
+  .seg button.on { background:var(--card); color:var(--ink); box-shadow:0 1px 2px rgb(16 30 56 / .08); }
+  .scroll { flex:1; overflow-y:auto; min-height:0; }
+  .thread { max-width:760px; margin:0 auto; padding:24px 20px 8px; }
+
+  .empty { max-width:760px; margin:0 auto; padding:72px 20px 24px; }
+  .empty h2 { font-size:24px; line-height:1.2; letter-spacing:-.02em; font-weight:600; margin:0 0 8px; max-width:22ch; }
+  .empty p { color:var(--mute); margin:0 0 20px; max-width:56ch; }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; }
+  .chip { border:1px solid var(--line); background:var(--card); border-radius:999px; padding:6px 13px; font-size:13px; }
+  .chip:hover { border-color:var(--primary); color:var(--primary); }
+
+  .msg-user { display:flex; justify-content:flex-end; margin:0 0 16px; }
+  .msg-user div { background:var(--primary); color:#fff; padding:9px 14px; border-radius:8px; max-width:80%; white-space:pre-line; }
+  .msg-bot { margin:0 0 32px; }
+  .answer { font-size:15px; white-space:pre-line; margin:0 0 12px; }
+  .action { background:var(--tint); border-radius:8px; padding:12px 14px; margin:0 0 12px; }
+  .action b { display:flex; gap:6px; align-items:center; font-weight:600; font-size:13px; color:var(--primary); margin-bottom:3px; }
+  blockquote { margin:0 0 12px; padding:2px 0 2px 12px; border-left:2px solid var(--input); color:#2a2b2f; }
+  blockquote small { display:block; color:var(--mute); font-size:12px; margin-top:3px; }
+  .checked { display:flex; flex-wrap:wrap; gap:6px 14px; align-items:center; color:var(--mute); font-size:12.5px; }
+  .checked span { display:inline-flex; gap:5px; align-items:center; }
+  .checked .ok svg { color:var(--ok); } .checked .low { color:var(--warn); }
+  .propose { margin-top:12px; padding:10px 12px; border:1px dashed var(--input); border-radius:8px; font-size:13px; }
+  .btn { border:1px solid var(--input); background:var(--card); border-radius:6px; padding:4px 10px; font-size:13px; font-weight:500; }
+  .btn:hover { border-color:var(--primary); color:var(--primary); } .btn:active { transform:translateY(1px); }
+  .err { color:var(--bad); }
+
+  /* Ask Glisper mark: the Glisper ring with its dot swapped for a twinkling AI sparkle (same as
+     geo-frontend ai-mark.tsx). .thinking runs a spark along the ring, for loaders. */
+  .ai-mark { width:18px; height:18px; flex:none; overflow:visible; color:var(--primary); }
+  .ai-mark .star, .ai-mark .mini { fill:var(--amber); transform-box:fill-box; transform-origin:center; }
+  .ai-mark .mini { transform:scale(0); }
+  .ai-mark .comet { fill:none; stroke:var(--amber); stroke-width:16; stroke-linecap:round; stroke-dasharray:0 100; }
+  @media (prefers-reduced-motion: no-preference) {
+    .ai-mark .star { animation:ai-twinkle 2.4s ease-in-out infinite; }
+    .ai-mark .mini { animation:ai-pop 2.4s ease-in-out infinite; }
+    .ai-mark.thinking .star, .ai-mark.thinking .mini { animation-duration:1.2s; }
+    .ai-mark.thinking .comet { animation:ai-comet 1.2s cubic-bezier(.65,0,.35,1) infinite; }
+  }
+  @keyframes ai-twinkle { 0% { transform:rotate(0) scale(1); } 50% { transform:rotate(45deg) scale(.78); } 100% { transform:rotate(90deg) scale(1); } }
+  @keyframes ai-pop { 0%,100% { transform:scale(0) rotate(0); opacity:0; } 35% { transform:scale(1) rotate(45deg); opacity:1; } 65% { transform:scale(0) rotate(90deg); opacity:0; } }
+  @keyframes ai-comet { 0% { stroke-dasharray:0 100; stroke-dashoffset:0; } 50% { stroke-dasharray:18 82; } 100% { stroke-dasharray:0 100; stroke-dashoffset:-100; } }
+
+  .chats .loading { display:flex; gap:8px; align-items:center; }
+  /* live status: what Glisper is doing right now */
+  .status { display:flex; gap:8px; align-items:center; color:var(--mute); font-size:13.5px; margin:2px 0 10px; }
+  .status .verb { font-weight:500; background:linear-gradient(90deg,var(--mute) 0%,var(--ink) 50%,var(--mute) 100%);
+                  background-size:200% 100%; -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .status .secs { font-family:var(--mono); font-size:12px; }
+  @media (prefers-reduced-motion: no-preference) { .status .verb { animation:sweep 1.8s linear infinite; } }
+  @keyframes sweep { from { background-position:100% 0; } to { background-position:-100% 0; } }
+
+  /* detailed view only */
+  .app[data-view="simple"] .d-only { display:none !important; }
+  .app[data-view="detailed"] .s-only { display:none !important; }
+  .meta { display:flex; gap:6px; flex-wrap:wrap; margin:0 0 10px; }
+  .pill { border:1px solid var(--line); border-radius:999px; padding:1px 9px; font-size:12px; color:var(--mute); background:var(--card); }
+  .pill.high { color:var(--ok); border-color:var(--ok); } .pill.medium { color:var(--warn); border-color:var(--warn); } .pill.low { color:var(--bad); border-color:var(--bad); }
+  details.box { border:1px solid var(--line); border-radius:8px; background:var(--card); margin:0 0 8px; }
+  details.box > summary { cursor:pointer; padding:8px 12px; font-size:13px; font-weight:500; color:var(--mute); }
+  details.box > div { padding:0 12px 10px; }
+  pre { background:var(--muted); padding:8px; border-radius:6px; white-space:pre-wrap; font:12px/1.5 var(--mono); margin:4px 0 8px; }
+  table { border-collapse:collapse; width:100%; font-size:12.5px; margin:4px 0 10px; }
+  th, td { text-align:left; padding:4px 8px; border-bottom:1px solid var(--line); } th { color:var(--mute); font-weight:500; }
+  td { font-variant-numeric:tabular-nums; } .tbl { overflow-x:auto; }
+  .small { color:var(--mute); font-size:12.5px; }
+  ol.trace { list-style:none; padding:0; margin:0; font-size:13px; }
+  ol.trace li { padding:6px 0; border-bottom:1px solid var(--line); } ol.trace li:last-child { border-bottom:0; }
+  .trace .t { font-family:var(--mono); font-size:11.5px; color:var(--mute); display:inline-block; min-width:48px; }
+  .trace .ag { font-weight:600; display:inline-block; min-width:72px; }
+  .trace .model { display:block; color:var(--mute); font:11px/1.4 var(--mono); margin-left:124px; }
+  .trace .crit { color:var(--bad); font-size:12px; margin:2px 0 0 124px; }
+  .trace details { margin-left:124px; } .trace summary { cursor:pointer; color:var(--mute); font-size:12px; }
+  .PASS { color:var(--ok); font-weight:600; } .REJECT { color:var(--bad); font-weight:600; }
+
+  /* composer */
+  .composer-wrap { padding:8px 20px 16px; }
+  .composer-wrap .chips { max-width:760px; margin:0 auto 8px; }
+  form.composer { max-width:760px; margin:0 auto; display:flex; gap:8px; align-items:flex-end; background:var(--card);
+                  border:1px solid var(--input); border-radius:8px; padding:8px 8px 8px 14px; }
+  form.composer:focus-within { border-color:var(--primary); box-shadow:0 0 0 3px rgb(23 44 74 / .12); }
+  textarea { flex:1; border:0; outline:0; resize:none; font:inherit; font-size:15px; background:none; color:var(--ink);
+             max-height:160px; padding:4px 0; overflow-y:hidden; }
+  textarea::placeholder, input::placeholder { color:#7a7b82; }
+  .send { border:0; background:var(--primary); color:#fff; border-radius:6px; width:34px; height:34px; display:grid; place-items:center; }
+  .send:disabled { opacity:.4; cursor:default; }
+  input[type=text] { border:1px solid var(--input); border-radius:6px; padding:5px 8px; font:inherit; font-size:13px; background:var(--card); color:var(--ink); }
+  input[type=text]:focus { outline:0; border-color:var(--primary); }
+  .scrim { display:none; }
+
+  /* narrow (the Glisper panel on a small screen, phones): sidebar becomes a drawer */
+  @media (max-width:760px) {
+    .app { grid-template-columns:1fr; }
+    .side { position:fixed; inset:0 auto 0 0; width:min(290px,86vw); z-index:2; transform:translateX(-100%); transition:transform .2s ease; }
+    .app.drawer .side { transform:none; }
+    .app.drawer .scrim { display:block; position:fixed; inset:0; background:rgb(11 11 12 / .3); z-index:1; }
+    .menu { display:block; }
+    .top, .thread, .composer-wrap { padding-left:16px; padding-right:16px; }
+    .trace .model, .trace .crit, .trace details { margin-left:0; }
+  }
+</style>
+</head>
+<body>
+<div class="app" id="app" data-view="simple">
+  <aside class="side">
+    <div class="side-head"><strong><i data-ai-mark></i>Ask Glisper</strong><span id="brand">AI-search visibility</span></div>
+    <button class="newchat" id="newchat"><i data-lucide="plus"></i>New chat</button>
+    <nav class="chats" id="chats" aria-label="Chats"><p class="loading"><i data-ai-mark="thinking"></i>Loading chats</p></nav>
+    <div class="side-foot">
+      <details>
+        <summary><i data-lucide="bookmark"></i><span id="memtitle">Glisper remembers</span></summary>
+        <ul class="mem" id="mem"></ul>
+        <form class="rem" id="rem">
+          <label for="fact" class="small" hidden>A fact about your brand</label>
+          <input type="text" id="fact" placeholder="e.g. Ignore Kurta Co, Karachi only">
+          <button class="btn">Add</button>
+        </form>
+      </details>
+      <div class="datalabel" id="datalabel"></div>
+    </div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+  <main class="conv">
+    <header class="top">
+      <button class="menu" id="menu" aria-label="Show chats"><i data-lucide="panel-left"></i></button>
+      <h1 id="title">New chat</h1>
+      <div class="seg" role="group" aria-label="View">
+        <button data-view="simple">Simple</button><button data-view="detailed">Detailed</button>
+      </div>
+    </header>
+    <div class="scroll" id="scroll">
+      <div class="empty" id="empty">
+        <h2>Why do AI engines pick a rival over you?</h2>
+        <p>Glisper reads your tracked ChatGPT, Perplexity and Gemini answers, checks every number against them, and tells you one thing to do this week.</p>
+        <div class="chips">
+          <button class="chip" data-q="Why are we losing on Perplexity?">Why are we losing on Perplexity?</button>
+          <button class="chip" data-q="Who beats us on Gemini, and which sources do they get cited from?">Who beats us on Gemini?</button>
+          <button class="chip" data-q="Which sites should we get listed on first?">Which sites should we get listed on?</button>
+        </div>
+      </div>
+      <div class="thread" id="thread"></div>
+    </div>
+    <div class="composer-wrap">
+      <div class="chips" id="followups" hidden>
+        <button class="chip" data-q="Draft the message I should send them.">Draft the message to send</button>
+        <button class="chip" data-q="What about ChatGPT?">What about ChatGPT?</button>
+        <button class="chip" data-q="Explain that more simply.">Explain it more simply</button>
+      </div>
+      <form class="composer" id="ask">
+        <label for="q" hidden>Message</label>
+        <textarea id="q" rows="1" placeholder="Ask about your AI-search visibility"></textarea>
+        <button class="send" id="go" aria-label="Send"><i data-lucide="arrow-up"></i></button>
+      </form>
+    </div>
+  </main>
+</div>
+<script>
+const $ = (id) => document.getElementById(id);
+const ARC = "M97.437 -22.495A100 100 0 1 1 22.495 -97.437";
+const STAR = "M0 -1C.12 -.12 .12 -.12 1 0C.12 .12 .12 .12 0 1C-.12 .12 -.12 .12 -1 0C-.12 -.12 -.12 -.12 0 -1Z";
+const aiMark = (thinking = false) => `<svg class="ai-mark${thinking ? " thinking" : ""}" viewBox="-108 -108 216 216" aria-hidden="true">` +
+  `<path d="${ARC}" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round"/>` +
+  `<path d="${ARC}" pathLength="100" class="comet"/>` +
+  `<g transform="translate(70.711 -70.711) scale(34)"><path d="${STAR}" class="star"/></g>` +
+  [[34, -46, 13, 0.7], [62, -26, 9, 1.4]].map(([x, y, k, d]) =>
+    `<g transform="translate(${x} ${y}) scale(${k})"><path d="${STAR}" class="mini" style="animation-delay:${d}s"/></g>`).join("") +
+  `</svg>`;
+document.querySelectorAll("[data-ai-mark]").forEach((n) => { n.outerHTML = aiMark(n.dataset.aiMark === "thinking"); });
+const qs = new URLSearchParams(location.search);
+const BRAND_ID = qs.get("brand");  // set by the Glisper panel; none = demo brand
+const BQ = BRAND_ID ? `brand=${encodeURIComponent(BRAND_ID)}` : "";
+const getJSON = async (path) => (await fetch(path + (path.includes("?") ? "&" : "?") + BQ)).json();
+const post = (path, body) => fetch(path, { method: "POST", headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ ...body, brand_id: BRAND_ID }) });
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const icons = () => window.lucide?.createIcons();
+const newId = () => crypto.randomUUID?.() ?? Array.from({ length: 32 }, () => (Math.random() * 16 | 0).toString(16)).join("");
+
+let current = null;  // open chat id
+let live = null;     // the run this page is streaming: {chat, el}
+
+// ---------- view toggle: Simple (end users) / Detailed (agent trace, evidence, models) ----------
+function setView(v) {
+  $("app").dataset.view = v;
+  document.querySelectorAll(".seg button").forEach((b) => b.classList.toggle("on", b.dataset.view === v));
+  try { localStorage.setItem("askglisper.view", v); } catch {}
+}
+let savedView = null; try { savedView = localStorage.getItem("askglisper.view"); } catch {}
+setView(qs.get("view") || savedView || "simple");
+document.querySelectorAll(".seg button").forEach((b) => b.addEventListener("click", () => setView(b.dataset.view)));
+
+// ---------- what Glisper is doing: each step event arrives when a step ends, so name the one that starts next ----------
+function verb(e) {
+  const d = e?.decision || "";
+  if (!e) return "starting";
+  if (e.agent === "System") return "recalling what you told it";
+  if (e.agent === "Memory") return "planning the analysis";
+  if (e.agent === "Planner") return e.next === "Reporter" ? "drafting from the last answer's data" : "writing the query";
+  if (e.agent === "Analyst") return d.startsWith("wrote SQL") ? "querying your tracked answers" : "working through the results";
+  if (e.agent === "Evaluator" && /^REJECT \d/.test(d)) return "rewriting: the fact-check caught something";
+  if (e.agent === "Evaluator" && d.startsWith("REJECT")) return "fixing a query";
+  if (e.agent === "Evaluator") return "pulling answers that show it";
+  if (e.agent === "Reporter" && d.startsWith("draft")) return "fact-checking every number";
+  return "wrapping up";
+}
+setInterval(() => document.querySelectorAll(".status[data-t0]").forEach((s) => {
+  s.querySelector(".secs").textContent = Math.round((Date.now() - s.dataset.t0) / 1000) + "s";
+}), 1000);
+
+// ---------- rendering ----------
+function table(rows) {
+  if (!rows?.length) return '<p class="small">no rows</p>';
+  const cols = Object.keys(rows[0]);
+  return `<div class="tbl"><table><tr>${cols.map((c) => `<th>${esc(c)}</th>`).join("")}</tr>${rows
+    .map((r) => `<tr>${cols.map((c) => `<td>${esc(r[c])}</td>`).join("")}</tr>`).join("")}</table></div>`;
+}
+function traceItem(e) {
+  const v = (e.decision.match(/^(PASS|REJECT)/) || [])[1];
+  const li = document.createElement("li");
+  li.innerHTML = `<span class="t">${Number(e.t).toFixed(1)}s</span><span class="ag">${esc(e.agent)}</span>` +
+    `<span class="${v || ""}">${esc(e.decision)}</span>` +
+    `<span class="model">${esc(e.engine || e.model)}${typeof e.result === "string" ? " · " + esc(e.result) : ""}</span>` +
+    (e.critique || []).map((c) => `<div class="crit">${esc(c)}</div>`).join("") +
+    (e.sql ? `<details><summary>SQL</summary><pre>${esc(e.sql)}</pre></details>` : "");
+  return li;
+}
+function userMsg(q) {
+  const el = document.createElement("div");
+  el.className = "msg-user"; el.innerHTML = `<div>${esc(q)}</div>`;
+  $("thread").appendChild(el);
+}
+// an answer in progress: live status line (both views) + live trace (Detailed)
+function botMsg(steps = []) {
+  const el = document.createElement("div");
+  el.className = "msg-bot";
+  const last = steps[steps.length - 1];
+  el.innerHTML = `<div class="status" data-t0="${Date.now() - (last?.t || 0) * 1000}">${aiMark(true)}<span class="verb">Glisper is ${esc(verb(last))}</span><span class="secs">0s</span></div>` +
+    `<details class="box d-only" open><summary>Agent trace</summary><div><ol class="trace"></ol></div></details>`;
+  $("thread").appendChild(el);
+  steps.forEach((e) => addStep(el, e));
+  return el;
+}
+function addStep(el, e) {
+  el.querySelector(".verb").textContent = `Glisper is ${verb(e)}`;
+  el.querySelector("ol.trace")?.appendChild(traceItem(e));
+}
+function fill(el, f) {
+  const quotes = f.quotes || [];
+  const quote = (q) => `<blockquote>${esc(q.quote)}<small>${esc(q.engine)} answering “${esc(q.prompt)}” · ${esc(q.date)}</small></blockquote>`;
+  const checked = f.passed
+    ? `<span class="ok"><i data-lucide="badge-check"></i>Every number checked against your tracked answers${f.retries ? `, rewritten ${f.retries === 1 ? "once" : f.retries + " times"} to get there` : ""}</span>`
+    : `<span class="low"><i data-lucide="triangle-alert"></i>Low confidence: Glisper could not verify every claim</span>`;
+  el.innerHTML =
+    `<div class="answer">${esc(f.answer)}</div>` +
+    (f.action ? `<div class="action"><b><i data-lucide="calendar-check"></i>Do this week</b>${esc(f.action)}</div>` : "") +
+    (quotes.length ? `<div class="s-only">${quote(quotes[0])}</div><div class="d-only">${quotes.map(quote).join("")}</div>` : "") +
+    `<div class="meta d-only"><span class="pill ${esc(f.confidence)}">confidence: ${esc(f.confidence)}</span><span class="pill">Evaluator ${f.score}/9</span>` +
+    `<span class="pill">retries: ${f.retries}</span><span class="pill">models: ${esc((f.models || []).join(", ") || "none (SAMPLE_MODE)")}</span></div>` +
+    (f.limitations ? `<pre class="d-only">${esc(f.limitations)}</pre>` : "") +
+    `<details class="box d-only"><summary>Evidence: ${f.evidence.length} queries</summary><div>` + f.evidence.map((ev) =>
+      `<p class="small">${esc(ev.skill)} via ${esc(ev.backend)}</p>${table(ev.rows)}<details><summary class="small">SQL</summary><pre>${esc(ev.sql)}</pre></details>`).join("") + `</div></details>` +
+    `<details class="box d-only trace-box"><summary>Agent trace</summary><div><ol class="trace"></ol><p class="small">Run log: ${esc(f.log)}</p></div></details>` +
+    `<div class="checked">${checked}${f.data_label ? `<span>${esc(f.data_label)}</span>` : ""}` +
+    (f.memories_used?.length ? `<span class="d-only">Brand memory used: ${f.memories_used.map(esc).join("; ")}</span>` : "") + `</div>` +
+    (f.propose_memory ? `<div class="propose">Remember this for next time? “${esc(f.propose_memory)}” <button class="btn approve">Remember</button></div>` : "");
+  const tb = el.querySelector(".trace-box");
+  tb.addEventListener("toggle", async () => {  // older answers: load the logged steps on first open
+    if (!tb.open || tb.dataset.loaded) return;
+    tb.dataset.loaded = 1;
+    const t = await getJSON(`/trace?run=${encodeURIComponent(f.run_id)}`);
+    (t.steps || []).forEach((e) => tb.querySelector("ol").appendChild(traceItem(e)));
+  });
+  el.querySelector(".approve")?.addEventListener("click", (ev) => { remember(f.propose_memory); ev.target.closest(".propose").textContent = "Saved to brand memory."; });
+  icons();
+}
+
+// ---------- chats ----------
+const ago = (t) => { const m = Math.round((Date.now() / 1000 - t) / 60);
+  return m < 1 ? "just now" : m < 60 ? `${m} min ago` : m < 1440 ? `${Math.round(m / 60)} h ago` : `${Math.round(m / 1440)} d ago`; };
+async function loadChats() {
+  const r = await getJSON("/chats");
+  if (r.error) { $("chats").innerHTML = `<p class="err">${esc(r.error)}</p>`; return; }
+  $("chats").innerHTML = r.chats.length ? "" : "<p>No chats yet. Ask a question to start one.</p>";
+  r.chats.forEach((c) => {
+    const b = document.createElement("button");
+    b.className = "chat-item" + (c.chat_id === current ? " on" : "");
+    b.innerHTML = `<b>${esc(c.title)}</b><small class="${c.active ? "live" : ""}">${c.active ? "Answering now" : `${c.turns} ${c.turns === 1 ? "question" : "questions"} · ${ago(c.updated)}`}</small>`;
+    b.addEventListener("click", () => { openChat(c.chat_id); $("app").classList.remove("drawer"); });
+    $("chats").appendChild(b);
+  });
+}
+function setChrome(title) {
+  const has = $("thread").children.length > 0;
+  $("empty").hidden = has; $("followups").hidden = !has;
+  $("title").textContent = title || "New chat";
+  document.querySelectorAll(".chat-item").forEach((b) => b.classList.remove("on"));
+  history.replaceState(null, "", location.pathname + location.search + (current ? `#chat=${current}` : ""));
+}
+const bottom = () => { $("scroll").scrollTop = $("scroll").scrollHeight; };
+
+// the conversation lives on the server: reloading, switching chats or closing the panel loses nothing
+async function openChat(id) {
+  current = id;
+  $("thread").innerHTML = "";
+  if (!id) { setChrome(); return loadChats(); }
+  const h = await getJSON(`/history?chat=${encodeURIComponent(id)}`);
+  if (current !== id || h.error) return;
+  h.runs.forEach((f) => { userMsg(f.question); const el = botMsg(); fill(el, f); });
+  let poll = false;
+  h.active.forEach((a) => {
+    userMsg(a.question);
+    const el = botMsg(a.steps);
+    if (live?.chat === id) live.el = el; else poll = true;  // asked before this page opened: pick up its answer
+  });
+  if (poll) setTimeout(() => current === id && openChat(id), 3000);
+  setChrome(h.runs[0]?.question || h.active[0]?.question);
+  loadChats(); bottom();
+}
+
+async function send(q) {
+  q = q.trim();
+  if (!q || live) return;
+  if (!current) current = newId();
+  const chat = current;
+  userMsg(q);
+  live = { chat, el: botMsg() };
+  setChrome($("title").textContent === "New chat" ? q : $("title").textContent);
+  $("q").value = ""; grow(); $("go").disabled = true; bottom();
+  setTimeout(loadChats, 300);
+  try {
+    const res = await post("/ask", { question: q, chat_id: chat });
+    if (!res.ok) { live.el.innerHTML = `<p class="err">${esc((await res.json()).error)}</p>`; return; }
+    const reader = res.body.getReader(), dec = new TextDecoder();
+    let buf = "";
+    for (;;) {
+      const { value, done } = await reader.read();
+      if (done) break;
+      buf += dec.decode(value, { stream: true });
+      let i;
+      while ((i = buf.indexOf("\n")) >= 0) {
+        const msg = JSON.parse(buf.slice(0, i)); buf = buf.slice(i + 1);
+        const shown = live.el.isConnected;
+        if (msg.type === "step") { if (shown) { addStep(live.el, msg); if (current === chat) bottom(); } }
+        else if (msg.type === "final") { if (shown) fill(live.el, msg); }
+        else if (shown) live.el.innerHTML = `<p class="err">Glisper hit an error: ${esc(msg.error)}</p>`;
+      }
+    }
+  } catch (e) {
+    if (live.el.isConnected) live.el.innerHTML = `<p class="err">Lost the connection. The answer will still appear in this chat when it finishes.</p>`;
+  } finally { live = null; $("go").disabled = false; loadChats(); }
+}
+
+// ---------- brand memory (H-MEM) ----------
+async function loadMem() {
+  const m = await getJSON("/memory");
+  if (m.error) { $("mem").innerHTML = `<li class="muted err">${esc(m.error)}</li>`; return; }
+  $("brand").textContent = `${m.brand} · ${m.domain}`;
+  $("datalabel").textContent = m.data_label || "";
+  $("memtitle").textContent = `Glisper remembers (${m.memories?.length || 0})`;
+  $("mem").innerHTML = m.memories?.length ? m.memories.map((x) => `<li>${esc(x.content)}</li>`).join("")
+    : '<li class="muted small">Nothing yet. Add facts about your market, like rivals to ignore.</li>';
+}
+async function remember(text) {
+  if (!text) return;
+  await post("/remember", { text });
+  $("fact").value = ""; loadMem();
+}
+
+// ---------- wiring ----------
+const grow = () => { const t = $("q"); t.style.height = "auto"; t.style.height = t.scrollHeight + "px";
+  t.style.overflowY = t.scrollHeight > 160 ? "auto" : "hidden"; };
+$("q").addEventListener("input", grow);
+$("q").addEventListener("keydown", (e) => { if (e.key === "Enter" && !e.shiftKey && !e.isComposing) { e.preventDefault(); send($("q").value); } });
+$("ask").addEventListener("submit", (e) => { e.preventDefault(); send($("q").value); });
+$("rem").addEventListener("submit", (e) => { e.preventDefault(); remember($("fact").value.trim()); });
+document.querySelectorAll("[data-q]").forEach((b) => b.addEventListener("click", () => send(b.dataset.q)));
+$("newchat").addEventListener("click", () => { openChat(null); $("app").classList.remove("drawer"); $("q").focus(); });
+$("menu").addEventListener("click", () => $("app").classList.add("drawer"));
+$("scrim").addEventListener("click", () => $("app").classList.remove("drawer"));
+icons();
+loadMem();
+openChat((location.hash.match(/chat=([0-9a-f-]+)/) || [])[1] || null);
+</script>
+</body>
+</html>

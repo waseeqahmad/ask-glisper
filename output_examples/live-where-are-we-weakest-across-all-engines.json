@@ -1,0 +1,182 @@
+{
+  "run_id": "20261027-120751-ff0b0e",
+  "question": "Where are we weakest across all engines?",
+  "answer": "Lahore Loom's weakest engine is Gemini, where it holds only 40.3% first\u2011place share (29 mentions) compared to 55.6% on Claude (40 mentions) and 61.1% on ChatGPT (44 mentions). On ChatGPT, answers where Lahore Loom does not win cite third\u2011party domains more heavily, notably dawn.com (50.0% of losses vs 43.2% of wins), daraz.pk (40.9% vs 38.6%), and youtube.com (36.4% vs 38.6%). Winning answers on ChatGPT always cite lahoreloom.pk (100% won, 0% not\u2011won).",
+  "action": "Pitch a brand feature or story to dawn.com this week to gain citations on the domain that appears in 50.0% of losing ChatGPT answers.",
+  "confidence": "medium",
+  "score": 8,
+  "passed": true,
+  "retries": 0,
+  "evidence": [
+    {
+      "skill": "competitor_gap",
+      "sql": "WITH engine_totals AS (\n  SELECT engine, COUNT(*) AS total_answers\n  FROM GLISPER_DEMO.answers\n  GROUP BY engine\n)\nSELECT a.engine,\n       a.winner AS competitor,\n       COUNT(*) AS frequency,\n       ROUND(100.0 * COUNT(*) / et.total_answers, 1) AS share_pct\nFROM GLISPER_DEMO.answers a\nJOIN engine_totals et ON a.engine = et.engine\nWHERE a.winner <> 'Kurta Co'\nGROUP BY a.engine, a.winner, et.total_answers\nORDER BY a.engine, frequency DESC LIMIT 200",
+      "rows": [
+        {
+          "engine": "chatgpt",
+          "competitor": "Lahore Loom",
+          "frequency": 44,
+          "share_pct": 61.1
+        },
+        {
+          "engine": "chatgpt",
+          "competitor": "Threadline",
+          "frequency": 9,
+          "share_pct": 12.5
+        },
+        {
+          "engine": "chatgpt",
+          "competitor": "Rang Bazaar",
+          "frequency": 7,
+          "share_pct": 9.7
+        },
+        {
+          "engine": "chatgpt",
+          "competitor": "Silk Route Studio",
+          "frequency": 6,
+          "share_pct": 8.3
+        },
+        {
+          "engine": "claude",
+          "competitor": "Lahore Loom",
+          "frequency": 40,
+          "share_pct": 55.6
+        },
+        {
+          "engine": "claude",
+          "competitor": "Silk Route Studio",
+          "frequency": 12,
+          "share_pct": 16.7
+        },
+        {
+          "engine": "claude",
+          "competitor": "Threadline",
+          "frequency": 8,
+          "share_pct": 11.1
+        },
+        {
+          "engine": "claude",
+          "competitor": "Rang Bazaar",
+          "frequency": 8,
+          "share_pct": 11.1
+        },
+        {
+          "engine": "gemini",
+          "competitor": "Lahore Loom",
+          "frequency": 29,
+          "share_pct": 40.3
+        },
+        {
+          "engine": "gemini",
+          "competitor": "Threadline",
+          "frequency": 9,
+          "share_pct": 12.5
+        }
+      ],
+      "backend": "zetaris"
+    },
+    {
+      "skill": "source_gap",
+      "sql": "WITH filtered AS (\n  SELECT a.result_id, a.run_date, a.engine, a.status\n  FROM GLISPER_DEMO.answers a\n  WHERE a.winner <> 'Kurta Co'\n),\nanswer_domains AS (\n  SELECT DISTINCT f.result_id, f.run_date, f.engine, f.status, s.domain\n  FROM filtered f\n  JOIN GLISPER_DEMO.answer_sources s\n    ON f.result_id = s.result_id\n   AND f.run_date = s.run_date\n   AND f.engine = s.engine\n),\ntotals AS (\n  SELECT\n    engine,\n    SUM(CASE WHEN status = 'won' THEN 1 ELSE 0 END) AS total_won,\n    SUM(CASE WHEN status <> 'won' THEN 1 ELSE 0 END) AS total_not_won\n  FROM (SELECT DISTINCT result_id, run_date, engine, status FROM filtered) t\n  GROUP BY engine\n),\ndomain_stats AS (\n  SELECT\n    engine,\n    domain,\n    SUM(CASE WHEN status = 'won' THEN 1 ELSE 0 END) AS won_citations,\n    SUM(CASE WHEN status <> 'won' THEN 1 ELSE 0 END) AS not_won_citations\n  FROM (SELECT DISTINCT result_id, run_date, engine, status, domain FROM answer_domains) d\n  GROUP BY engine, domain\n)\nSELECT\n  ds.engine,\n  ds.domain,\n  ROUND(100.0 * ds.not_won_citations / t.total_not_won, 1) AS not_won_pct,\n  ROUND(100.0 * ds.won_citations / t.total_won, 1) AS won_pct\nFROM domain_stats ds\nJOIN totals t ON ds.engine = t.engine\nWHERE t.total_not_won > 0 AND t.total_won > 0\nORDER BY ds.engine, not_won_pct DESC, won_pct ASC LIMIT 200",
+      "rows": [
+        {
+          "engine": "chatgpt",
+          "domain": "dawn.com",
+          "not_won_pct": 50.0,
+          "won_pct": 43.2
+        },
+        {
+          "engine": "chatgpt",
+          "domain": "threadline.pk",
+          "not_won_pct": 40.9,
+          "won_pct": 0.0
+        },
+        {
+          "engine": "chatgpt",
+          "domain": "daraz.pk",
+          "not_won_pct": 40.9,
+          "won_pct": 38.6
+        },
+        {
+          "engine": "chatgpt",
+          "domain": "youtube.com",
+          "not_won_pct": 36.4,
+          "won_pct": 38.6
+        },
+        {
+          "engine": "chatgpt",
+          "domain": "rangbazaar.pk",
+          "not_won_pct": 31.8,
+          "won_pct": 0.0
+        },
+        {
+          "engine": "chatgpt",
+          "domain": "instagram.com",
+          "not_won_pct": 31.8,
+          "won_pct": 36.4
+        },
+        {
+          "engine": "chatgpt",
+          "domain": "silkroutestudio.pk",
+          "not_won_pct": 27.3,
+          "won_pct": 0.0
+        },
+        {
+          "engine": "chatgpt",
+          "domain": "lahorestyleguide.pk",
+          "not_won_pct": 18.2,
+          "won_pct": 11.4
+        },
+        {
+          "engine": "chatgpt",
+          "domain": "reddit.com",
+          "not_won_pct": 9.1,
+          "won_pct": 0.0
+        },
+        {
+          "engine": "chatgpt",
+          "domain": "lahoreloom.pk",
+          "not_won_pct": 0.0,
+          "won_pct": 100.0
+        }
+      ],
+      "backend": "zetaris"
+    }
+  ],
+  "quotes": [
+    {
+      "result_id": "18fdd2b9-79e5-c9aa-592a-35497ba109d0",
+      "date": "2026-10-19",
+      "engine": "perplexity",
+      "prompt": "best place for Eid outfits in Lahore",
+      "quote": "1. Threadline: trendy pret and quick delivery.",
+      "cited": "https://www.dawn.com/news/lifestyle/lahore-fashion-week-2026"
+    },
+    {
+      "result_id": "15aede0f-c777-a07f-6346-d4ef69ef74e3",
+      "date": "2026-10-19",
+      "engine": "chatgpt",
+      "prompt": "affordable kurta shop Lahore",
+      "quote": "1. Silk Route Studio: premium silk formals.",
+      "cited": "https://www.dawn.com/news/lifestyle/lahore-fashion-week-2026"
+    },
+    {
+      "result_id": "5e4c4fd1-4623-63a9-32f8-dbabb462e3e8",
+      "date": "2026-10-19",
+      "engine": "gemini",
+      "prompt": "Lahore fashion brands for students",
+      "quote": "1. Kurta Co: budget kurtas, ships across Karachi.",
+      "cited": "https://www.dawn.com/news/lifestyle/lahore-fashion-week-2026"
+    }
+  ],
+  "memories_used": [
+    "Ignore Kurta Co: they only ship in Karachi, not a competitor for us"
+  ],
+  "propose_memory": null,
+  "models": [
+    "nvidia/nemotron-3-ultra-550b-a55b",
+    "nvidia/nemotron-3.5-lightning-30b-a3b"
+  ],
+  "data_label": "Simulated data (synthetic demo audit, not real engine answers)",
+  "log": "logs/20261027-120751-ff0b0e.jsonl"
+}

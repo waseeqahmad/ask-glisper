@@ -1,0 +1,842 @@
+result_id,run_date,engine,status,brand,is_us,position
+bdd640fb-0667-1ad1-1c80-317fa3b1799d,2026-10-05,chatgpt,won,Lahore Loom,1,1
+bdd640fb-0667-1ad1-1c80-317fa3b1799d,2026-10-05,chatgpt,won,Rang Bazaar,0,2
+bdd640fb-0667-1ad1-1c80-317fa3b1799d,2026-10-05,chatgpt,won,Silk Route Studio,0,3
+bdd640fb-0667-1ad1-1c80-317fa3b1799d,2026-10-05,chatgpt,won,Threadline,0,4
+37f8a88b-17fc-695a-07a0-ca6e0822e8f3,2026-10-05,perplexity,partial,Threadline,0,1
+37f8a88b-17fc-695a-07a0-ca6e0822e8f3,2026-10-05,perplexity,partial,Silk Route Studio,0,2
+37f8a88b-17fc-695a-07a0-ca6e0822e8f3,2026-10-05,perplexity,partial,Kurta Co,0,3
+37f8a88b-17fc-695a-07a0-ca6e0822e8f3,2026-10-05,perplexity,partial,Lahore Loom,1,4
+371ecd7b-27cd-8130-4722-9389571aa876,2026-10-05,gemini,lost,Kurta Co,0,1
+371ecd7b-27cd-8130-4722-9389571aa876,2026-10-05,gemini,lost,Rang Bazaar,0,2
+ec1b8ca1-f91e-1d4c-1ff4-9b7889463e85,2026-10-05,claude,won,Lahore Loom,1,1
+ec1b8ca1-f91e-1d4c-1ff4-9b7889463e85,2026-10-05,claude,won,Threadline,0,2
+ec1b8ca1-f91e-1d4c-1ff4-9b7889463e85,2026-10-05,claude,won,Kurta Co,0,3
+ec1b8ca1-f91e-1d4c-1ff4-9b7889463e85,2026-10-05,claude,won,Rang Bazaar,0,4
+4a15544d-c5e7-ce8a-3a57-8a8ea9488d99,2026-10-05,chatgpt,lost,Rang Bazaar,0,1
+4a15544d-c5e7-ce8a-3a57-8a8ea9488d99,2026-10-05,chatgpt,lost,Silk Route Studio,0,2
+4a15544d-c5e7-ce8a-3a57-8a8ea9488d99,2026-10-05,chatgpt,lost,Kurta Co,0,3
+aefcfad8-efc8-9849-b3aa-7efe4458a885,2026-10-05,perplexity,lost,Threadline,0,1
+aefcfad8-efc8-9849-b3aa-7efe4458a885,2026-10-05,perplexity,lost,Silk Route Studio,0,2
+0e51f30d-c6a7-ee39-c4b0-32ccd7c524a5,2026-10-05,gemini,won,Lahore Loom,1,1
+0e51f30d-c6a7-ee39-c4b0-32ccd7c524a5,2026-10-05,gemini,won,Rang Bazaar,0,2
+0e51f30d-c6a7-ee39-c4b0-32ccd7c524a5,2026-10-05,gemini,won,Silk Route Studio,0,3
+ea1fca65-e27a-984d-6548-21d07fcd9eb1,2026-10-05,claude,lost,Threadline,0,1
+ea1fca65-e27a-984d-6548-21d07fcd9eb1,2026-10-05,claude,lost,Silk Route Studio,0,2
+ea1fca65-e27a-984d-6548-21d07fcd9eb1,2026-10-05,claude,lost,Rang Bazaar,0,3
+c17af08a-1745-d6d8-7e57-0ddf827050a8,2026-10-05,chatgpt,won,Lahore Loom,1,1
+c17af08a-1745-d6d8-7e57-0ddf827050a8,2026-10-05,chatgpt,won,Kurta Co,0,2
+c17af08a-1745-d6d8-7e57-0ddf827050a8,2026-10-05,chatgpt,won,Silk Route Studio,0,3
+c17af08a-1745-d6d8-7e57-0ddf827050a8,2026-10-05,chatgpt,won,Rang Bazaar,0,4
+77d21e02-ff01-cf99-988c-24c961b1cd22,2026-10-05,perplexity,lost,Rang Bazaar,0,1
+77d21e02-ff01-cf99-988c-24c961b1cd22,2026-10-05,perplexity,lost,Kurta Co,0,2
+77d21e02-ff01-cf99-988c-24c961b1cd22,2026-10-05,perplexity,lost,Silk Route Studio,0,3
+e037e5ed-b8db-0672-f42d-47cc00d4af59,2026-10-05,gemini,lost,Rang Bazaar,0,1
+e037e5ed-b8db-0672-f42d-47cc00d4af59,2026-10-05,gemini,lost,Kurta Co,0,2
+e037e5ed-b8db-0672-f42d-47cc00d4af59,2026-10-05,gemini,lost,Silk Route Studio,0,3
+87c5421e-ec24-a3c5-c754-108ff4188f3f,2026-10-05,claude,lost,Silk Route Studio,0,1
+87c5421e-ec24-a3c5-c754-108ff4188f3f,2026-10-05,claude,lost,Rang Bazaar,0,2
+f26b4776-913e-4de2-e0c5-3cb83da9c2a9,2026-10-05,chatgpt,won,Lahore Loom,1,1
+f26b4776-913e-4de2-e0c5-3cb83da9c2a9,2026-10-05,chatgpt,won,Kurta Co,0,2
+6c52c49f-9b49-bd26-df57-c59a8715a103,2026-10-05,perplexity,lost,Rang Bazaar,0,1
+6c52c49f-9b49-bd26-df57-c59a8715a103,2026-10-05,perplexity,lost,Kurta Co,0,2
+6c52c49f-9b49-bd26-df57-c59a8715a103,2026-10-05,perplexity,lost,Threadline,0,3
+05628059-568c-c69b-1064-005c3985c3cf,2026-10-05,gemini,lost,Threadline,0,1
+05628059-568c-c69b-1064-005c3985c3cf,2026-10-05,gemini,lost,Silk Route Studio,0,2
+474a493b-3ced-df2d-839f-bc501223b513,2026-10-05,claude,lost,Threadline,0,1
+474a493b-3ced-df2d-839f-bc501223b513,2026-10-05,claude,lost,Rang Bazaar,0,2
+778eedb3-693d-ffbc-6c6f-a6115ab33edf,2026-10-05,chatgpt,lost,Threadline,0,1
+778eedb3-693d-ffbc-6c6f-a6115ab33edf,2026-10-05,chatgpt,lost,Silk Route Studio,0,2
+23e2fcb4-72d8-567d-894a-05e430b187ef,2026-10-05,perplexity,lost,Threadline,0,1
+23e2fcb4-72d8-567d-894a-05e430b187ef,2026-10-05,perplexity,lost,Silk Route Studio,0,2
+23e2fcb4-72d8-567d-894a-05e430b187ef,2026-10-05,perplexity,lost,Rang Bazaar,0,3
+3c835dc0-d944-1fa5-c0e9-ab30ed2662e9,2026-10-05,gemini,won,Lahore Loom,1,1
+3c835dc0-d944-1fa5-c0e9-ab30ed2662e9,2026-10-05,gemini,won,Silk Route Studio,0,2
+3c835dc0-d944-1fa5-c0e9-ab30ed2662e9,2026-10-05,gemini,won,Threadline,0,3
+43e458fc-63f2-ae24-fc3d-3348008d4127,2026-10-05,claude,partial,Rang Bazaar,0,1
+43e458fc-63f2-ae24-fc3d-3348008d4127,2026-10-05,claude,partial,Threadline,0,2
+43e458fc-63f2-ae24-fc3d-3348008d4127,2026-10-05,claude,partial,Lahore Loom,1,3
+43e458fc-63f2-ae24-fc3d-3348008d4127,2026-10-05,claude,partial,Silk Route Studio,0,4
+7a0ecfea-958c-a9ba-0cd6-20c20ea2622b,2026-10-05,chatgpt,won,Lahore Loom,1,1
+7a0ecfea-958c-a9ba-0cd6-20c20ea2622b,2026-10-05,chatgpt,won,Rang Bazaar,0,2
+e3e9de99-f10c-718b-1eb0-e38a675dd5af,2026-10-05,perplexity,lost,Threadline,0,1
+e3e9de99-f10c-718b-1eb0-e38a675dd5af,2026-10-05,perplexity,lost,Silk Route Studio,0,2
+e3e9de99-f10c-718b-1eb0-e38a675dd5af,2026-10-05,perplexity,lost,Rang Bazaar,0,3
+43ff5011-3d1a-85dd-506e-5a9ab758588d,2026-10-05,gemini,won,Lahore Loom,1,1
+43ff5011-3d1a-85dd-506e-5a9ab758588d,2026-10-05,gemini,won,Threadline,0,2
+43e42caf-8181-a8cc-3691-47eb89a2688b,2026-10-05,claude,won,Lahore Loom,1,1
+43e42caf-8181-a8cc-3691-47eb89a2688b,2026-10-05,claude,won,Kurta Co,0,2
+43e42caf-8181-a8cc-3691-47eb89a2688b,2026-10-05,claude,won,Rang Bazaar,0,3
+a76afde6-ce9e-1a11-fcbb-4e59fbddcf7c,2026-10-05,chatgpt,won,Lahore Loom,1,1
+a76afde6-ce9e-1a11-fcbb-4e59fbddcf7c,2026-10-05,chatgpt,won,Kurta Co,0,2
+35ebd32d-9ad6-20ab-4821-2ddb45b89cd9,2026-10-05,perplexity,partial,Threadline,0,1
+35ebd32d-9ad6-20ab-4821-2ddb45b89cd9,2026-10-05,perplexity,partial,Lahore Loom,1,2
+35ebd32d-9ad6-20ab-4821-2ddb45b89cd9,2026-10-05,perplexity,partial,Kurta Co,0,3
+35ebd32d-9ad6-20ab-4821-2ddb45b89cd9,2026-10-05,perplexity,partial,Silk Route Studio,0,4
+a319dcb4-217d-65a0-c568-11cd5563f616,2026-10-05,gemini,partial,Threadline,0,1
+a319dcb4-217d-65a0-c568-11cd5563f616,2026-10-05,gemini,partial,Lahore Loom,1,2
+a319dcb4-217d-65a0-c568-11cd5563f616,2026-10-05,gemini,partial,Kurta Co,0,3
+5d59cd2a-4eea-04e7-0ab5-4bde20a04502,2026-10-05,claude,lost,Rang Bazaar,0,1
+5d59cd2a-4eea-04e7-0ab5-4bde20a04502,2026-10-05,claude,lost,Silk Route Studio,0,2
+ccc56569-f9e8-a369-2999-b735dd56cc94,2026-10-05,chatgpt,lost,Rang Bazaar,0,1
+ccc56569-f9e8-a369-2999-b735dd56cc94,2026-10-05,chatgpt,lost,Kurta Co,0,2
+ccc56569-f9e8-a369-2999-b735dd56cc94,2026-10-05,chatgpt,lost,Silk Route Studio,0,3
+1bac27a7-b386-f7a4-c991-603f28c13091,2026-10-05,perplexity,lost,Threadline,0,1
+1bac27a7-b386-f7a4-c991-603f28c13091,2026-10-05,perplexity,lost,Rang Bazaar,0,2
+6601ddd0-3170-f437-a8f7-ef5a060edf5b,2026-10-05,gemini,won,Lahore Loom,1,1
+6601ddd0-3170-f437-a8f7-ef5a060edf5b,2026-10-05,gemini,won,Rang Bazaar,0,2
+6601ddd0-3170-f437-a8f7-ef5a060edf5b,2026-10-05,gemini,won,Silk Route Studio,0,3
+6601ddd0-3170-f437-a8f7-ef5a060edf5b,2026-10-05,gemini,won,Kurta Co,0,4
+2db69edb-42de-ffcc-f86c-2ca2e08596db,2026-10-05,claude,partial,Rang Bazaar,0,1
+2db69edb-42de-ffcc-f86c-2ca2e08596db,2026-10-05,claude,partial,Kurta Co,0,2
+2db69edb-42de-ffcc-f86c-2ca2e08596db,2026-10-05,claude,partial,Lahore Loom,1,3
+2db69edb-42de-ffcc-f86c-2ca2e08596db,2026-10-05,claude,partial,Silk Route Studio,0,4
+41357e8c-30a9-00ad-939b-462de645f129,2026-10-05,chatgpt,won,Lahore Loom,1,1
+41357e8c-30a9-00ad-939b-462de645f129,2026-10-05,chatgpt,won,Kurta Co,0,2
+41357e8c-30a9-00ad-939b-462de645f129,2026-10-05,chatgpt,won,Silk Route Studio,0,3
+e6697833-b841-d0a0-1fe7-71d6d9178793,2026-10-05,perplexity,lost,Threadline,0,1
+e6697833-b841-d0a0-1fe7-71d6d9178793,2026-10-05,perplexity,lost,Kurta Co,0,2
+e6697833-b841-d0a0-1fe7-71d6d9178793,2026-10-05,perplexity,lost,Rang Bazaar,0,3
+8c459ce2-67f4-8ad5-4d0b-0d1a91b0e1d9,2026-10-05,gemini,lost,Kurta Co,0,1
+8c459ce2-67f4-8ad5-4d0b-0d1a91b0e1d9,2026-10-05,gemini,lost,Rang Bazaar,0,2
+8c459ce2-67f4-8ad5-4d0b-0d1a91b0e1d9,2026-10-05,gemini,lost,Silk Route Studio,0,3
+a9f25336-83f4-a9a9-48a6-39d015b52908,2026-10-05,claude,lost,Kurta Co,0,1
+a9f25336-83f4-a9a9-48a6-39d015b52908,2026-10-05,claude,lost,Rang Bazaar,0,2
+935f2b0a-a138-4ddc-e2d9-de5d6a18ce4c,2026-10-05,chatgpt,won,Lahore Loom,1,1
+935f2b0a-a138-4ddc-e2d9-de5d6a18ce4c,2026-10-05,chatgpt,won,Threadline,0,2
+2d06e8cf-3805-f907-6cd6-6193c7468f59,2026-10-05,perplexity,lost,Threadline,0,1
+2d06e8cf-3805-f907-6cd6-6193c7468f59,2026-10-05,perplexity,lost,Rang Bazaar,0,2
+e45b712e-b822-5688-d0a4-44329cd6c852,2026-10-05,gemini,lost,Silk Route Studio,0,1
+e45b712e-b822-5688-d0a4-44329cd6c852,2026-10-05,gemini,lost,Threadline,0,2
+7c0e8cd8-8573-e793-c715-b2b9c40c5d91,2026-10-05,claude,partial,Threadline,0,1
+7c0e8cd8-8573-e793-c715-b2b9c40c5d91,2026-10-05,claude,partial,Rang Bazaar,0,2
+7c0e8cd8-8573-e793-c715-b2b9c40c5d91,2026-10-05,claude,partial,Lahore Loom,1,3
+b4d7e28e-271e-3ee2-b1a6-b1f1620e99d3,2026-10-05,chatgpt,won,Lahore Loom,1,1
+b4d7e28e-271e-3ee2-b1a6-b1f1620e99d3,2026-10-05,chatgpt,won,Threadline,0,2
+b4d7e28e-271e-3ee2-b1a6-b1f1620e99d3,2026-10-05,chatgpt,won,Silk Route Studio,0,3
+b4d7e28e-271e-3ee2-b1a6-b1f1620e99d3,2026-10-05,chatgpt,won,Kurta Co,0,4
+e7a37e81-63b4-c08b-6b8e-869fd5385b0e,2026-10-05,perplexity,partial,Rang Bazaar,0,1
+e7a37e81-63b4-c08b-6b8e-869fd5385b0e,2026-10-05,perplexity,partial,Silk Route Studio,0,2
+e7a37e81-63b4-c08b-6b8e-869fd5385b0e,2026-10-05,perplexity,partial,Lahore Loom,1,3
+e7a37e81-63b4-c08b-6b8e-869fd5385b0e,2026-10-05,perplexity,partial,Kurta Co,0,4
+7c5308bf-6f92-f25e-45df-16b6382c043f,2026-10-05,gemini,won,Lahore Loom,1,1
+7c5308bf-6f92-f25e-45df-16b6382c043f,2026-10-05,gemini,won,Threadline,0,2
+7c5308bf-6f92-f25e-45df-16b6382c043f,2026-10-05,gemini,won,Kurta Co,0,3
+7c5308bf-6f92-f25e-45df-16b6382c043f,2026-10-05,gemini,won,Rang Bazaar,0,4
+64de82e6-e82c-7d7b-06e7-45f988bc539c,2026-10-05,claude,lost,Silk Route Studio,0,1
+64de82e6-e82c-7d7b-06e7-45f988bc539c,2026-10-05,claude,lost,Rang Bazaar,0,2
+e1301617-c2df-f335-5666-6f9f53ac2ab9,2026-10-05,chatgpt,won,Lahore Loom,1,1
+e1301617-c2df-f335-5666-6f9f53ac2ab9,2026-10-05,chatgpt,won,Silk Route Studio,0,2
+e1301617-c2df-f335-5666-6f9f53ac2ab9,2026-10-05,chatgpt,won,Threadline,0,3
+c7fee39f-1190-f938-a66f-d7f739669fa7,2026-10-05,perplexity,lost,Threadline,0,1
+c7fee39f-1190-f938-a66f-d7f739669fa7,2026-10-05,perplexity,lost,Silk Route Studio,0,2
+b31022f0-770c-7798-37cc-863bf2a03459,2026-10-05,gemini,won,Lahore Loom,1,1
+b31022f0-770c-7798-37cc-863bf2a03459,2026-10-05,gemini,won,Kurta Co,0,2
+ad66a1bd-9367-6a02-4fdc-6e1bedcb8cb6,2026-10-05,claude,lost,Kurta Co,0,1
+ad66a1bd-9367-6a02-4fdc-6e1bedcb8cb6,2026-10-05,claude,lost,Silk Route Studio,0,2
+8861fe18-58e2-5888-0a83-81bec85aca46,2026-10-05,chatgpt,won,Lahore Loom,1,1
+8861fe18-58e2-5888-0a83-81bec85aca46,2026-10-05,chatgpt,won,Rang Bazaar,0,2
+e43e4288-a2b5-b498-5cb8-5aedf5f62c97,2026-10-05,perplexity,lost,Threadline,0,1
+e43e4288-a2b5-b498-5cb8-5aedf5f62c97,2026-10-05,perplexity,lost,Rang Bazaar,0,2
+e43e4288-a2b5-b498-5cb8-5aedf5f62c97,2026-10-05,perplexity,lost,Kurta Co,0,3
+da09dfa0-5282-8d80-44b5-91f797ac6aa8,2026-10-05,gemini,won,Lahore Loom,1,1
+da09dfa0-5282-8d80-44b5-91f797ac6aa8,2026-10-05,gemini,won,Rang Bazaar,0,2
+2e8d0e87-5334-20e6-d9d8-0b8d7e8adee7,2026-10-05,claude,won,Lahore Loom,1,1
+2e8d0e87-5334-20e6-d9d8-0b8d7e8adee7,2026-10-05,claude,won,Threadline,0,2
+2e8d0e87-5334-20e6-d9d8-0b8d7e8adee7,2026-10-05,claude,won,Rang Bazaar,0,3
+3dc98290-15ea-bb27-30e9-12f2f2b43abf,2026-10-05,chatgpt,lost,Kurta Co,0,1
+3dc98290-15ea-bb27-30e9-12f2f2b43abf,2026-10-05,chatgpt,lost,Rang Bazaar,0,2
+3dc98290-15ea-bb27-30e9-12f2f2b43abf,2026-10-05,chatgpt,lost,Silk Route Studio,0,3
+79279973-5e78-1fd7-94e0-d3baa9f948b2,2026-10-05,perplexity,lost,Threadline,0,1
+79279973-5e78-1fd7-94e0-d3baa9f948b2,2026-10-05,perplexity,lost,Kurta Co,0,2
+79279973-5e78-1fd7-94e0-d3baa9f948b2,2026-10-05,perplexity,lost,Silk Route Studio,0,3
+892e6161-be2d-740a-1e9b-23bc50c7c006,2026-10-05,gemini,partial,Kurta Co,0,1
+892e6161-be2d-740a-1e9b-23bc50c7c006,2026-10-05,gemini,partial,Silk Route Studio,0,2
+892e6161-be2d-740a-1e9b-23bc50c7c006,2026-10-05,gemini,partial,Rang Bazaar,0,3
+892e6161-be2d-740a-1e9b-23bc50c7c006,2026-10-05,gemini,partial,Lahore Loom,1,4
+2defe193-5c62-b3a2-3a3c-563e4bd6cee6,2026-10-05,claude,won,Lahore Loom,1,1
+2defe193-5c62-b3a2-3a3c-563e4bd6cee6,2026-10-05,claude,won,Silk Route Studio,0,2
+92f5df7b-0323-d342-df6a-8f931a432f0a,2026-10-05,chatgpt,won,Lahore Loom,1,1
+92f5df7b-0323-d342-df6a-8f931a432f0a,2026-10-05,chatgpt,won,Threadline,0,2
+7de31a51-6694-c343-10ba-58e3d2762bdc,2026-10-05,perplexity,won,Lahore Loom,1,1
+7de31a51-6694-c343-10ba-58e3d2762bdc,2026-10-05,perplexity,won,Kurta Co,0,2
+7de31a51-6694-c343-10ba-58e3d2762bdc,2026-10-05,perplexity,won,Silk Route Studio,0,3
+7de31a51-6694-c343-10ba-58e3d2762bdc,2026-10-05,perplexity,won,Rang Bazaar,0,4
+6a8a616f-c3b2-90d0-8edd-dfcd1e52d770,2026-10-05,gemini,lost,Silk Route Studio,0,1
+6a8a616f-c3b2-90d0-8edd-dfcd1e52d770,2026-10-05,gemini,lost,Rang Bazaar,0,2
+6a8a616f-c3b2-90d0-8edd-dfcd1e52d770,2026-10-05,gemini,lost,Kurta Co,0,3
+f5c9b047-9c10-c572-0f6b-40d09efba58b,2026-10-05,claude,lost,Rang Bazaar,0,1
+f5c9b047-9c10-c572-0f6b-40d09efba58b,2026-10-05,claude,lost,Kurta Co,0,2
+f5c9b047-9c10-c572-0f6b-40d09efba58b,2026-10-05,claude,lost,Silk Route Studio,0,3
+b07aa066-7354-35ea-6894-9b8d00af5b3a,2026-10-05,chatgpt,lost,Threadline,0,1
+b07aa066-7354-35ea-6894-9b8d00af5b3a,2026-10-05,chatgpt,lost,Rang Bazaar,0,2
+b07aa066-7354-35ea-6894-9b8d00af5b3a,2026-10-05,chatgpt,lost,Silk Route Studio,0,3
+a5cb63a2-398d-1ca6-8b68-70b51d61fac3,2026-10-05,perplexity,won,Lahore Loom,1,1
+a5cb63a2-398d-1ca6-8b68-70b51d61fac3,2026-10-05,perplexity,won,Kurta Co,0,2
+4dd8eb85-b04d-3376-77fc-97031fd5a423,2026-10-05,gemini,partial,Rang Bazaar,0,1
+4dd8eb85-b04d-3376-77fc-97031fd5a423,2026-10-05,gemini,partial,Lahore Loom,1,2
+4dd8eb85-b04d-3376-77fc-97031fd5a423,2026-10-05,gemini,partial,Threadline,0,3
+4dd8eb85-b04d-3376-77fc-97031fd5a423,2026-10-05,gemini,partial,Kurta Co,0,4
+d6016237-ac9e-d156-f63f-ce413a9aca5e,2026-10-05,claude,lost,Silk Route Studio,0,1
+d6016237-ac9e-d156-f63f-ce413a9aca5e,2026-10-05,claude,lost,Rang Bazaar,0,2
+a2814044-6f96-2882-95d8-2980ff37d19c,2026-10-05,chatgpt,partial,Rang Bazaar,0,1
+a2814044-6f96-2882-95d8-2980ff37d19c,2026-10-05,chatgpt,partial,Threadline,0,2
+a2814044-6f96-2882-95d8-2980ff37d19c,2026-10-05,chatgpt,partial,Silk Route Studio,0,3
+a2814044-6f96-2882-95d8-2980ff37d19c,2026-10-05,chatgpt,partial,Lahore Loom,1,4
+d045dd1c-6684-09e3-f1f8-343ea99f1318,2026-10-05,perplexity,partial,Threadline,0,1
+d045dd1c-6684-09e3-f1f8-343ea99f1318,2026-10-05,perplexity,partial,Rang Bazaar,0,2
+d045dd1c-6684-09e3-f1f8-343ea99f1318,2026-10-05,perplexity,partial,Lahore Loom,1,3
+d045dd1c-6684-09e3-f1f8-343ea99f1318,2026-10-05,perplexity,partial,Silk Route Studio,0,4
+84b871bb-3005-68d2-0de0-51a669ca97d2,2026-10-05,gemini,won,Lahore Loom,1,1
+84b871bb-3005-68d2-0de0-51a669ca97d2,2026-10-05,gemini,won,Threadline,0,2
+7c16128d-b2c0-8394-e17f-29e170286046,2026-10-05,claude,won,Lahore Loom,1,1
+7c16128d-b2c0-8394-e17f-29e170286046,2026-10-05,claude,won,Rang Bazaar,0,2
+7c16128d-b2c0-8394-e17f-29e170286046,2026-10-05,claude,won,Threadline,0,3
+1d0bc9bd-e9b5-c5cf-d766-5cdafe049059,2026-10-05,chatgpt,won,Lahore Loom,1,1
+1d0bc9bd-e9b5-c5cf-d766-5cdafe049059,2026-10-05,chatgpt,won,Kurta Co,0,2
+1d0bc9bd-e9b5-c5cf-d766-5cdafe049059,2026-10-05,chatgpt,won,Rang Bazaar,0,3
+78e3654b-faf1-4ff0-7b85-179ad5b077e0,2026-10-05,perplexity,lost,Threadline,0,1
+78e3654b-faf1-4ff0-7b85-179ad5b077e0,2026-10-05,perplexity,lost,Rang Bazaar,0,2
+486822b9-00a8-1de9-d20f-87d044656d6b,2026-10-05,gemini,lost,Silk Route Studio,0,1
+486822b9-00a8-1de9-d20f-87d044656d6b,2026-10-05,gemini,lost,Threadline,0,2
+b28f41de-fb14-0bc3-304b-8590de9e3757,2026-10-05,claude,won,Lahore Loom,1,1
+b28f41de-fb14-0bc3-304b-8590de9e3757,2026-10-05,claude,won,Silk Route Studio,0,2
+d21c82f8-cada-4f80-a9e7-82d4fd08b32c,2026-10-05,chatgpt,lost,Threadline,0,1
+d21c82f8-cada-4f80-a9e7-82d4fd08b32c,2026-10-05,chatgpt,lost,Silk Route Studio,0,2
+d21c82f8-cada-4f80-a9e7-82d4fd08b32c,2026-10-05,chatgpt,lost,Rang Bazaar,0,3
+a79fbfaf-def5-7689-68f4-5bce24e75e8e,2026-10-05,perplexity,lost,Threadline,0,1
+a79fbfaf-def5-7689-68f4-5bce24e75e8e,2026-10-05,perplexity,lost,Kurta Co,0,2
+a79fbfaf-def5-7689-68f4-5bce24e75e8e,2026-10-05,perplexity,lost,Rang Bazaar,0,3
+7cea2045-c268-283e-e32f-2e63b7fddd71,2026-10-05,gemini,lost,Threadline,0,1
+7cea2045-c268-283e-e32f-2e63b7fddd71,2026-10-05,gemini,lost,Silk Route Studio,0,2
+7cea2045-c268-283e-e32f-2e63b7fddd71,2026-10-05,gemini,lost,Rang Bazaar,0,3
+4ca9cf07-b1aa-0f6a-2a96-e1e27194eae2,2026-10-05,claude,lost,Threadline,0,1
+4ca9cf07-b1aa-0f6a-2a96-e1e27194eae2,2026-10-05,claude,lost,Rang Bazaar,0,2
+4ca9cf07-b1aa-0f6a-2a96-e1e27194eae2,2026-10-05,claude,lost,Silk Route Studio,0,3
+deef580f-9c07-a751-1437-45092cd1586a,2026-10-05,chatgpt,won,Lahore Loom,1,1
+deef580f-9c07-a751-1437-45092cd1586a,2026-10-05,chatgpt,won,Silk Route Studio,0,2
+cdfc6ee0-e61e-de90-0267-deb3aab612c9,2026-10-05,perplexity,lost,Threadline,0,1
+cdfc6ee0-e61e-de90-0267-deb3aab612c9,2026-10-05,perplexity,lost,Silk Route Studio,0,2
+ffd6f232-32ff-e294-4d57-d880d865d69a,2026-10-05,gemini,won,Lahore Loom,1,1
+ffd6f232-32ff-e294-4d57-d880d865d69a,2026-10-05,gemini,won,Kurta Co,0,2
+ffd6f232-32ff-e294-4d57-d880d865d69a,2026-10-05,gemini,won,Silk Route Studio,0,3
+6553867d-a881-bfd3-d47d-577bfa5a91ca,2026-10-05,claude,won,Lahore Loom,1,1
+6553867d-a881-bfd3-d47d-577bfa5a91ca,2026-10-05,claude,won,Rang Bazaar,0,2
+6553867d-a881-bfd3-d47d-577bfa5a91ca,2026-10-05,claude,won,Kurta Co,0,3
+9ef2b93e-30ac-7d7b-a2f9-63a33810ae66,2026-10-05,chatgpt,won,Lahore Loom,1,1
+9ef2b93e-30ac-7d7b-a2f9-63a33810ae66,2026-10-05,chatgpt,won,Rang Bazaar,0,2
+9ef2b93e-30ac-7d7b-a2f9-63a33810ae66,2026-10-05,chatgpt,won,Threadline,0,3
+9ef2b93e-30ac-7d7b-a2f9-63a33810ae66,2026-10-05,chatgpt,won,Silk Route Studio,0,4
+21a4344f-bb7b-ee03-5d67-8bb1945ef2e4,2026-10-05,perplexity,won,Lahore Loom,1,1
+21a4344f-bb7b-ee03-5d67-8bb1945ef2e4,2026-10-05,perplexity,won,Threadline,0,2
+f1b64afe-d31e-df1a-e9ff-1cae41c8ca8c,2026-10-05,gemini,lost,Silk Route Studio,0,1
+f1b64afe-d31e-df1a-e9ff-1cae41c8ca8c,2026-10-05,gemini,lost,Threadline,0,2
+8eac0a33-cdf9-74a7-d882-b5c1f79efd70,2026-10-05,claude,won,Lahore Loom,1,1
+8eac0a33-cdf9-74a7-d882-b5c1f79efd70,2026-10-05,claude,won,Silk Route Studio,0,2
+8eac0a33-cdf9-74a7-d882-b5c1f79efd70,2026-10-05,claude,won,Kurta Co,0,3
+8eac0a33-cdf9-74a7-d882-b5c1f79efd70,2026-10-05,claude,won,Threadline,0,4
+f0b6f83f-a377-f6f1-d289-f0ab618ae305,2026-10-05,chatgpt,won,Lahore Loom,1,1
+f0b6f83f-a377-f6f1-d289-f0ab618ae305,2026-10-05,chatgpt,won,Silk Route Studio,0,2
+f0b6f83f-a377-f6f1-d289-f0ab618ae305,2026-10-05,chatgpt,won,Threadline,0,3
+f0b6f83f-a377-f6f1-d289-f0ab618ae305,2026-10-05,chatgpt,won,Rang Bazaar,0,4
+76da3ca0-d2e8-2f38-a2a9-d4d8102efde5,2026-10-05,perplexity,partial,Threadline,0,1
+76da3ca0-d2e8-2f38-a2a9-d4d8102efde5,2026-10-05,perplexity,partial,Lahore Loom,1,2
+76da3ca0-d2e8-2f38-a2a9-d4d8102efde5,2026-10-05,perplexity,partial,Rang Bazaar,0,3
+637e4b01-22ba-e10e-899c-a782e3236d1a,2026-10-05,gemini,lost,Kurta Co,0,1
+637e4b01-22ba-e10e-899c-a782e3236d1a,2026-10-05,gemini,lost,Threadline,0,2
+71818dcf-379e-fc6e-5edb-0d3cb0b63bcf,2026-10-05,claude,won,Lahore Loom,1,1
+71818dcf-379e-fc6e-5edb-0d3cb0b63bcf,2026-10-05,claude,won,Silk Route Studio,0,2
+71818dcf-379e-fc6e-5edb-0d3cb0b63bcf,2026-10-05,claude,won,Threadline,0,3
+71818dcf-379e-fc6e-5edb-0d3cb0b63bcf,2026-10-05,claude,won,Rang Bazaar,0,4
+1f45dbfd-f7dc-67e0-3097-4b2b46a02a9b,2026-10-05,chatgpt,partial,Rang Bazaar,0,1
+1f45dbfd-f7dc-67e0-3097-4b2b46a02a9b,2026-10-05,chatgpt,partial,Kurta Co,0,2
+1f45dbfd-f7dc-67e0-3097-4b2b46a02a9b,2026-10-05,chatgpt,partial,Lahore Loom,1,3
+350843f0-8de0-8fc2-c3e1-5a85d46ef104,2026-10-05,perplexity,lost,Silk Route Studio,0,1
+350843f0-8de0-8fc2-c3e1-5a85d46ef104,2026-10-05,perplexity,lost,Rang Bazaar,0,2
+2cabd7e7-cc6b-66e5-402a-df9c8a4b8f7c,2026-10-05,gemini,won,Lahore Loom,1,1
+2cabd7e7-cc6b-66e5-402a-df9c8a4b8f7c,2026-10-05,gemini,won,Kurta Co,0,2
+2cabd7e7-cc6b-66e5-402a-df9c8a4b8f7c,2026-10-05,gemini,won,Silk Route Studio,0,3
+0d6a05b3-43ef-2016-2c9b-662e040a3aae,2026-10-05,claude,won,Lahore Loom,1,1
+0d6a05b3-43ef-2016-2c9b-662e040a3aae,2026-10-05,claude,won,Kurta Co,0,2
+0d6a05b3-43ef-2016-2c9b-662e040a3aae,2026-10-05,claude,won,Threadline,0,3
+0d6a05b3-43ef-2016-2c9b-662e040a3aae,2026-10-05,claude,won,Silk Route Studio,0,4
+80fb9296-73b6-a09b-1bea-f6ac97fa7f04,2026-10-05,chatgpt,won,Lahore Loom,1,1
+80fb9296-73b6-a09b-1bea-f6ac97fa7f04,2026-10-05,chatgpt,won,Rang Bazaar,0,2
+80fb9296-73b6-a09b-1bea-f6ac97fa7f04,2026-10-05,chatgpt,won,Kurta Co,0,3
+66d06371-d8e8-8ebb-7a9e-8eefffa361be,2026-10-05,perplexity,lost,Threadline,0,1
+66d06371-d8e8-8ebb-7a9e-8eefffa361be,2026-10-05,perplexity,lost,Kurta Co,0,2
+8c611654-95da-75c1-a211-50f99fd34579,2026-10-05,gemini,lost,Kurta Co,0,1
+8c611654-95da-75c1-a211-50f99fd34579,2026-10-05,gemini,lost,Threadline,0,2
+8c611654-95da-75c1-a211-50f99fd34579,2026-10-05,gemini,lost,Silk Route Studio,0,3
+3a7e8e14-e359-eee1-7399-1a476e191042,2026-10-05,claude,won,Lahore Loom,1,1
+3a7e8e14-e359-eee1-7399-1a476e191042,2026-10-05,claude,won,Threadline,0,2
+3a7e8e14-e359-eee1-7399-1a476e191042,2026-10-05,claude,won,Silk Route Studio,0,3
+3a7e8e14-e359-eee1-7399-1a476e191042,2026-10-05,claude,won,Kurta Co,0,4
+2713582c-f41e-a3ac-5fd2-31094140752c,2026-10-12,chatgpt,lost,Kurta Co,0,1
+2713582c-f41e-a3ac-5fd2-31094140752c,2026-10-12,chatgpt,lost,Silk Route Studio,0,2
+8fca7b6a-8fc4-2092-f4e5-59e596229348,2026-10-12,perplexity,lost,Threadline,0,1
+8fca7b6a-8fc4-2092-f4e5-59e596229348,2026-10-12,perplexity,lost,Kurta Co,0,2
+d8e7012f-3968-1c81-7b70-c3b8a81fdec3,2026-10-12,gemini,won,Lahore Loom,1,1
+d8e7012f-3968-1c81-7b70-c3b8a81fdec3,2026-10-12,gemini,won,Rang Bazaar,0,2
+d8e7012f-3968-1c81-7b70-c3b8a81fdec3,2026-10-12,gemini,won,Kurta Co,0,3
+d8e7012f-3968-1c81-7b70-c3b8a81fdec3,2026-10-12,gemini,won,Threadline,0,4
+b18753e6-d457-8ad9-a867-a096edd877c8,2026-10-12,claude,won,Lahore Loom,1,1
+b18753e6-d457-8ad9-a867-a096edd877c8,2026-10-12,claude,won,Threadline,0,2
+b18753e6-d457-8ad9-a867-a096edd877c8,2026-10-12,claude,won,Silk Route Studio,0,3
+11d059b2-6699-cd99-a847-bce790fa6b57,2026-10-12,chatgpt,won,Lahore Loom,1,1
+11d059b2-6699-cd99-a847-bce790fa6b57,2026-10-12,chatgpt,won,Kurta Co,0,2
+11d059b2-6699-cd99-a847-bce790fa6b57,2026-10-12,chatgpt,won,Silk Route Studio,0,3
+c6deb2f0-530a-c1c7-b8ba-83684fc77768,2026-10-12,perplexity,lost,Threadline,0,1
+c6deb2f0-530a-c1c7-b8ba-83684fc77768,2026-10-12,perplexity,lost,Silk Route Studio,0,2
+45ee432d-6a07-f213-7129-cec79b69554d,2026-10-12,gemini,won,Lahore Loom,1,1
+45ee432d-6a07-f213-7129-cec79b69554d,2026-10-12,gemini,won,Rang Bazaar,0,2
+996d5c50-fc04-a168-652f-fb493873e57f,2026-10-12,claude,won,Lahore Loom,1,1
+996d5c50-fc04-a168-652f-fb493873e57f,2026-10-12,claude,won,Silk Route Studio,0,2
+6e3f683a-bf3c-5140-7f54-a51101fa964e,2026-10-12,chatgpt,won,Lahore Loom,1,1
+6e3f683a-bf3c-5140-7f54-a51101fa964e,2026-10-12,chatgpt,won,Kurta Co,0,2
+6e3f683a-bf3c-5140-7f54-a51101fa964e,2026-10-12,chatgpt,won,Threadline,0,3
+6e3f683a-bf3c-5140-7f54-a51101fa964e,2026-10-12,chatgpt,won,Silk Route Studio,0,4
+6fac1673-0ad4-5230-bdf6-6ba5dc9c96de,2026-10-12,perplexity,won,Lahore Loom,1,1
+6fac1673-0ad4-5230-bdf6-6ba5dc9c96de,2026-10-12,perplexity,won,Rang Bazaar,0,2
+6fac1673-0ad4-5230-bdf6-6ba5dc9c96de,2026-10-12,perplexity,won,Silk Route Studio,0,3
+6fac1673-0ad4-5230-bdf6-6ba5dc9c96de,2026-10-12,perplexity,won,Kurta Co,0,4
+532401fc-f758-dce2-0556-daea67b03283,2026-10-12,gemini,won,Lahore Loom,1,1
+532401fc-f758-dce2-0556-daea67b03283,2026-10-12,gemini,won,Threadline,0,2
+862268d1-6683-e107-96c0-44d06f887f28,2026-10-12,claude,won,Lahore Loom,1,1
+862268d1-6683-e107-96c0-44d06f887f28,2026-10-12,claude,won,Threadline,0,2
+87d5b7be-1d30-d990-a21b-030782af085c,2026-10-12,chatgpt,won,Lahore Loom,1,1
+87d5b7be-1d30-d990-a21b-030782af085c,2026-10-12,chatgpt,won,Rang Bazaar,0,2
+c257cf73-c29d-782b-2722-796e9a36d1ec,2026-10-12,perplexity,lost,Threadline,0,1
+c257cf73-c29d-782b-2722-796e9a36d1ec,2026-10-12,perplexity,lost,Kurta Co,0,2
+c257cf73-c29d-782b-2722-796e9a36d1ec,2026-10-12,perplexity,lost,Silk Route Studio,0,3
+71348c2a-780b-3657-117b-355b70944bdb,2026-10-12,gemini,lost,Silk Route Studio,0,1
+71348c2a-780b-3657-117b-355b70944bdb,2026-10-12,gemini,lost,Kurta Co,0,2
+71348c2a-780b-3657-117b-355b70944bdb,2026-10-12,gemini,lost,Threadline,0,3
+a508dc95-13a4-a492-497d-e16dd4ea120a,2026-10-12,claude,lost,Rang Bazaar,0,1
+a508dc95-13a4-a492-497d-e16dd4ea120a,2026-10-12,claude,lost,Threadline,0,2
+a508dc95-13a4-a492-497d-e16dd4ea120a,2026-10-12,claude,lost,Kurta Co,0,3
+a6ded1d8-9258-17b7-cf50-1889e8b77f7b,2026-10-12,chatgpt,won,Lahore Loom,1,1
+a6ded1d8-9258-17b7-cf50-1889e8b77f7b,2026-10-12,chatgpt,won,Kurta Co,0,2
+3f6c21f7-0a05-37f0-2c2c-d22ba56895c6,2026-10-12,perplexity,lost,Rang Bazaar,0,1
+3f6c21f7-0a05-37f0-2c2c-d22ba56895c6,2026-10-12,perplexity,lost,Kurta Co,0,2
+3f6c21f7-0a05-37f0-2c2c-d22ba56895c6,2026-10-12,perplexity,lost,Threadline,0,3
+54669d19-10df-9974-55ab-946da5b5cdc2,2026-10-12,gemini,won,Lahore Loom,1,1
+54669d19-10df-9974-55ab-946da5b5cdc2,2026-10-12,gemini,won,Threadline,0,2
+54669d19-10df-9974-55ab-946da5b5cdc2,2026-10-12,gemini,won,Silk Route Studio,0,3
+54669d19-10df-9974-55ab-946da5b5cdc2,2026-10-12,gemini,won,Kurta Co,0,4
+2434a678-a9e2-7ba9-952e-6abb14dd5061,2026-10-12,claude,lost,Kurta Co,0,1
+2434a678-a9e2-7ba9-952e-6abb14dd5061,2026-10-12,claude,lost,Threadline,0,2
+f275b5f3-d436-a7a8-b3ec-b951ab8cbf97,2026-10-12,chatgpt,lost,Silk Route Studio,0,1
+f275b5f3-d436-a7a8-b3ec-b951ab8cbf97,2026-10-12,chatgpt,lost,Kurta Co,0,2
+f275b5f3-d436-a7a8-b3ec-b951ab8cbf97,2026-10-12,chatgpt,lost,Threadline,0,3
+31274148-7c7c-404e-c422-d03ef29a6339,2026-10-12,perplexity,lost,Threadline,0,1
+31274148-7c7c-404e-c422-d03ef29a6339,2026-10-12,perplexity,lost,Rang Bazaar,0,2
+218c6e1c-9e37-4f7a-c42c-bc39e05b46c5,2026-10-12,gemini,partial,Threadline,0,1
+218c6e1c-9e37-4f7a-c42c-bc39e05b46c5,2026-10-12,gemini,partial,Silk Route Studio,0,2
+218c6e1c-9e37-4f7a-c42c-bc39e05b46c5,2026-10-12,gemini,partial,Lahore Loom,1,3
+218c6e1c-9e37-4f7a-c42c-bc39e05b46c5,2026-10-12,gemini,partial,Rang Bazaar,0,4
+88b4f474-3be7-9df4-72ec-f16ec8a723e9,2026-10-12,claude,won,Lahore Loom,1,1
+88b4f474-3be7-9df4-72ec-f16ec8a723e9,2026-10-12,claude,won,Silk Route Studio,0,2
+88b4f474-3be7-9df4-72ec-f16ec8a723e9,2026-10-12,claude,won,Kurta Co,0,3
+88b4f474-3be7-9df4-72ec-f16ec8a723e9,2026-10-12,claude,won,Threadline,0,4
+87079ad4-80be-7e35-61c2-645ac7332304,2026-10-12,chatgpt,won,Lahore Loom,1,1
+87079ad4-80be-7e35-61c2-645ac7332304,2026-10-12,chatgpt,won,Rang Bazaar,0,2
+87079ad4-80be-7e35-61c2-645ac7332304,2026-10-12,chatgpt,won,Silk Route Studio,0,3
+d88c656d-b61e-5fdb-1a43-5206ef2ddcc4,2026-10-12,perplexity,lost,Threadline,0,1
+d88c656d-b61e-5fdb-1a43-5206ef2ddcc4,2026-10-12,perplexity,lost,Silk Route Studio,0,2
+d88c656d-b61e-5fdb-1a43-5206ef2ddcc4,2026-10-12,perplexity,lost,Rang Bazaar,0,3
+597e6845-e277-18c5-737d-1fb6d11376e0,2026-10-12,gemini,lost,Kurta Co,0,1
+597e6845-e277-18c5-737d-1fb6d11376e0,2026-10-12,gemini,lost,Threadline,0,2
+25637cc3-ca97-ebf5-55d5-96afa663d2cd,2026-10-12,claude,won,Lahore Loom,1,1
+25637cc3-ca97-ebf5-55d5-96afa663d2cd,2026-10-12,claude,won,Rang Bazaar,0,2
+25637cc3-ca97-ebf5-55d5-96afa663d2cd,2026-10-12,claude,won,Threadline,0,3
+25637cc3-ca97-ebf5-55d5-96afa663d2cd,2026-10-12,claude,won,Kurta Co,0,4
+d5c0244d-3735-262d-4184-3b0304dd7054,2026-10-12,chatgpt,won,Lahore Loom,1,1
+d5c0244d-3735-262d-4184-3b0304dd7054,2026-10-12,chatgpt,won,Silk Route Studio,0,2
+9f708368-cb3c-f8ca-a392-57316b79afcc,2026-10-12,perplexity,lost,Threadline,0,1
+9f708368-cb3c-f8ca-a392-57316b79afcc,2026-10-12,perplexity,lost,Rang Bazaar,0,2
+ab1021ce-aa14-3cd8-2ff3-cde46aa42c9f,2026-10-12,gemini,won,Lahore Loom,1,1
+ab1021ce-aa14-3cd8-2ff3-cde46aa42c9f,2026-10-12,gemini,won,Kurta Co,0,2
+ab1021ce-aa14-3cd8-2ff3-cde46aa42c9f,2026-10-12,gemini,won,Rang Bazaar,0,3
+bf5023f4-40ef-3935-5f90-bed6fb25664d,2026-10-12,claude,won,Lahore Loom,1,1
+bf5023f4-40ef-3935-5f90-bed6fb25664d,2026-10-12,claude,won,Silk Route Studio,0,2
+bf5023f4-40ef-3935-5f90-bed6fb25664d,2026-10-12,claude,won,Rang Bazaar,0,3
+bf5023f4-40ef-3935-5f90-bed6fb25664d,2026-10-12,claude,won,Kurta Co,0,4
+8bc78e81-5a30-4528-0b59-95622227219f,2026-10-12,chatgpt,won,Lahore Loom,1,1
+8bc78e81-5a30-4528-0b59-95622227219f,2026-10-12,chatgpt,won,Threadline,0,2
+8bc78e81-5a30-4528-0b59-95622227219f,2026-10-12,chatgpt,won,Rang Bazaar,0,3
+8bc78e81-5a30-4528-0b59-95622227219f,2026-10-12,chatgpt,won,Silk Route Studio,0,4
+f1901b7e-c6b4-69ef-b74e-ba9310275b53,2026-10-12,perplexity,partial,Threadline,0,1
+f1901b7e-c6b4-69ef-b74e-ba9310275b53,2026-10-12,perplexity,partial,Silk Route Studio,0,2
+f1901b7e-c6b4-69ef-b74e-ba9310275b53,2026-10-12,perplexity,partial,Lahore Loom,1,3
+493e904d-30ec-2796-a59b-457fc0d7ac73,2026-10-12,gemini,won,Lahore Loom,1,1
+493e904d-30ec-2796-a59b-457fc0d7ac73,2026-10-12,gemini,won,Rang Bazaar,0,2
+493e904d-30ec-2796-a59b-457fc0d7ac73,2026-10-12,gemini,won,Kurta Co,0,3
+f4dbca07-e506-f670-7092-947dbe4969ec,2026-10-12,claude,won,Lahore Loom,1,1
+f4dbca07-e506-f670-7092-947dbe4969ec,2026-10-12,claude,won,Threadline,0,2
+f4dbca07-e506-f670-7092-947dbe4969ec,2026-10-12,claude,won,Silk Route Studio,0,3
+9a3a6103-6e3c-4532-1434-8f626cac028c,2026-10-12,chatgpt,partial,Threadline,0,1
+9a3a6103-6e3c-4532-1434-8f626cac028c,2026-10-12,chatgpt,partial,Kurta Co,0,2
+9a3a6103-6e3c-4532-1434-8f626cac028c,2026-10-12,chatgpt,partial,Lahore Loom,1,3
+0ad7c9a2-7277-16ec-59fe-fbbc71a3fad2,2026-10-12,perplexity,lost,Rang Bazaar,0,1
+0ad7c9a2-7277-16ec-59fe-fbbc71a3fad2,2026-10-12,perplexity,lost,Threadline,0,2
+0ad7c9a2-7277-16ec-59fe-fbbc71a3fad2,2026-10-12,perplexity,lost,Kurta Co,0,3
+28f4e3ce-aded-da80-bff9-507dcd14a03e,2026-10-12,gemini,partial,Threadline,0,1
+28f4e3ce-aded-da80-bff9-507dcd14a03e,2026-10-12,gemini,partial,Lahore Loom,1,2
+28f4e3ce-aded-da80-bff9-507dcd14a03e,2026-10-12,gemini,partial,Kurta Co,0,3
+f2e6195f-732e-2016-add7-02c92747b93c,2026-10-12,claude,won,Lahore Loom,1,1
+f2e6195f-732e-2016-add7-02c92747b93c,2026-10-12,claude,won,Kurta Co,0,2
+f2e6195f-732e-2016-add7-02c92747b93c,2026-10-12,claude,won,Silk Route Studio,0,3
+f2e6195f-732e-2016-add7-02c92747b93c,2026-10-12,claude,won,Threadline,0,4
+bc55300b-06a2-41af-1d0a-f7f7f5e4a471,2026-10-12,chatgpt,won,Lahore Loom,1,1
+bc55300b-06a2-41af-1d0a-f7f7f5e4a471,2026-10-12,chatgpt,won,Kurta Co,0,2
+bc55300b-06a2-41af-1d0a-f7f7f5e4a471,2026-10-12,chatgpt,won,Threadline,0,3
+ffa623d0-ea9e-5c8d-b1a8-b71f491b90e9,2026-10-12,perplexity,lost,Threadline,0,1
+ffa623d0-ea9e-5c8d-b1a8-b71f491b90e9,2026-10-12,perplexity,lost,Rang Bazaar,0,2
+4a552ea0-8acb-be09-8ccc-9cea109fd8ee,2026-10-12,gemini,lost,Rang Bazaar,0,1
+4a552ea0-8acb-be09-8ccc-9cea109fd8ee,2026-10-12,gemini,lost,Kurta Co,0,2
+4a552ea0-8acb-be09-8ccc-9cea109fd8ee,2026-10-12,gemini,lost,Threadline,0,3
+5c63b6f3-06ba-8cd3-7e78-38c9ca55e38b,2026-10-12,claude,partial,Kurta Co,0,1
+5c63b6f3-06ba-8cd3-7e78-38c9ca55e38b,2026-10-12,claude,partial,Silk Route Studio,0,2
+5c63b6f3-06ba-8cd3-7e78-38c9ca55e38b,2026-10-12,claude,partial,Lahore Loom,1,3
+5128b9b1-f8ed-e0ca-2015-6a7212e153a6,2026-10-12,chatgpt,lost,Kurta Co,0,1
+5128b9b1-f8ed-e0ca-2015-6a7212e153a6,2026-10-12,chatgpt,lost,Threadline,0,2
+de431e06-e924-7069-80bb-ae526ec01269,2026-10-12,perplexity,won,Lahore Loom,1,1
+de431e06-e924-7069-80bb-ae526ec01269,2026-10-12,perplexity,won,Kurta Co,0,2
+de431e06-e924-7069-80bb-ae526ec01269,2026-10-12,perplexity,won,Rang Bazaar,0,3
+e519dd7e-84d6-7c4f-f0df-1684f28e4122,2026-10-12,gemini,won,Lahore Loom,1,1
+e519dd7e-84d6-7c4f-f0df-1684f28e4122,2026-10-12,gemini,won,Silk Route Studio,0,2
+e519dd7e-84d6-7c4f-f0df-1684f28e4122,2026-10-12,gemini,won,Rang Bazaar,0,3
+e519dd7e-84d6-7c4f-f0df-1684f28e4122,2026-10-12,gemini,won,Kurta Co,0,4
+17eaec83-8892-042f-9d4b-2bf94d85e9c7,2026-10-12,claude,lost,Threadline,0,1
+17eaec83-8892-042f-9d4b-2bf94d85e9c7,2026-10-12,claude,lost,Silk Route Studio,0,2
+a4364fcd-f2d3-f761-0ba3-627914cb0564,2026-10-12,chatgpt,lost,Threadline,0,1
+a4364fcd-f2d3-f761-0ba3-627914cb0564,2026-10-12,chatgpt,lost,Rang Bazaar,0,2
+67f5ae02-af5b-8f47-ceae-71cfce000af0,2026-10-12,perplexity,lost,Threadline,0,1
+67f5ae02-af5b-8f47-ceae-71cfce000af0,2026-10-12,perplexity,lost,Silk Route Studio,0,2
+67f5ae02-af5b-8f47-ceae-71cfce000af0,2026-10-12,perplexity,lost,Rang Bazaar,0,3
+bbf483ce-51be-b80e-b7e6-a14cdc8a4922,2026-10-12,gemini,lost,Kurta Co,0,1
+bbf483ce-51be-b80e-b7e6-a14cdc8a4922,2026-10-12,gemini,lost,Rang Bazaar,0,2
+bbf483ce-51be-b80e-b7e6-a14cdc8a4922,2026-10-12,gemini,lost,Threadline,0,3
+18c8a616-2410-8e9a-3f77-9cae7318b96d,2026-10-12,claude,won,Lahore Loom,1,1
+18c8a616-2410-8e9a-3f77-9cae7318b96d,2026-10-12,claude,won,Threadline,0,2
+500e15c0-b89b-df7f-93e3-4c35ef0a573d,2026-10-12,chatgpt,won,Lahore Loom,1,1
+500e15c0-b89b-df7f-93e3-4c35ef0a573d,2026-10-12,chatgpt,won,Threadline,0,2
+500e15c0-b89b-df7f-93e3-4c35ef0a573d,2026-10-12,chatgpt,won,Silk Route Studio,0,3
+750d112e-8164-ceec-64ab-851bf1fac6e7,2026-10-12,perplexity,partial,Threadline,0,1
+750d112e-8164-ceec-64ab-851bf1fac6e7,2026-10-12,perplexity,partial,Rang Bazaar,0,2
+750d112e-8164-ceec-64ab-851bf1fac6e7,2026-10-12,perplexity,partial,Lahore Loom,1,3
+ba3df7ff-43b4-7ee5-e1e8-9e7e22498f66,2026-10-12,gemini,won,Lahore Loom,1,1
+ba3df7ff-43b4-7ee5-e1e8-9e7e22498f66,2026-10-12,gemini,won,Silk Route Studio,0,2
+ba3df7ff-43b4-7ee5-e1e8-9e7e22498f66,2026-10-12,gemini,won,Threadline,0,3
+62e7c1a6-12d2-fa06-49e1-cd138da00495,2026-10-12,claude,lost,Rang Bazaar,0,1
+62e7c1a6-12d2-fa06-49e1-cd138da00495,2026-10-12,claude,lost,Silk Route Studio,0,2
+66c14dca-8255-da61-9a3b-031932f57510,2026-10-12,chatgpt,won,Lahore Loom,1,1
+66c14dca-8255-da61-9a3b-031932f57510,2026-10-12,chatgpt,won,Kurta Co,0,2
+66c14dca-8255-da61-9a3b-031932f57510,2026-10-12,chatgpt,won,Silk Route Studio,0,3
+66c14dca-8255-da61-9a3b-031932f57510,2026-10-12,chatgpt,won,Rang Bazaar,0,4
+23c8afdb-83f8-2f16-e4a4-474c9b33e3a4,2026-10-12,perplexity,lost,Threadline,0,1
+23c8afdb-83f8-2f16-e4a4-474c9b33e3a4,2026-10-12,perplexity,lost,Rang Bazaar,0,2
+23c8afdb-83f8-2f16-e4a4-474c9b33e3a4,2026-10-12,perplexity,lost,Silk Route Studio,0,3
+54cc1e2a-5e4c-b287-0442-51dbd0d4ea67,2026-10-12,gemini,lost,Rang Bazaar,0,1
+54cc1e2a-5e4c-b287-0442-51dbd0d4ea67,2026-10-12,gemini,lost,Threadline,0,2
+86341718-2ba6-adb3-7afe-b1149561c813,2026-10-12,claude,partial,Silk Route Studio,0,1
+86341718-2ba6-adb3-7afe-b1149561c813,2026-10-12,claude,partial,Lahore Loom,1,2
+86341718-2ba6-adb3-7afe-b1149561c813,2026-10-12,claude,partial,Rang Bazaar,0,3
+80773e33-690e-7e62-3432-3ec6b0c4a01c,2026-10-12,chatgpt,lost,Rang Bazaar,0,1
+80773e33-690e-7e62-3432-3ec6b0c4a01c,2026-10-12,chatgpt,lost,Kurta Co,0,2
+e980f808-75ac-824c-2c55-aef7f4e95734,2026-10-12,perplexity,partial,Threadline,0,1
+e980f808-75ac-824c-2c55-aef7f4e95734,2026-10-12,perplexity,partial,Lahore Loom,1,2
+e980f808-75ac-824c-2c55-aef7f4e95734,2026-10-12,perplexity,partial,Kurta Co,0,3
+e980f808-75ac-824c-2c55-aef7f4e95734,2026-10-12,perplexity,partial,Silk Route Studio,0,4
+7d2f4e58-b47a-1c5b-b0b3-901535102852,2026-10-12,gemini,won,Lahore Loom,1,1
+7d2f4e58-b47a-1c5b-b0b3-901535102852,2026-10-12,gemini,won,Threadline,0,2
+7d2f4e58-b47a-1c5b-b0b3-901535102852,2026-10-12,gemini,won,Kurta Co,0,3
+257f7595-cdfb-4db9-c5e7-8b23f4613f09,2026-10-12,claude,won,Lahore Loom,1,1
+257f7595-cdfb-4db9-c5e7-8b23f4613f09,2026-10-12,claude,won,Kurta Co,0,2
+257f7595-cdfb-4db9-c5e7-8b23f4613f09,2026-10-12,claude,won,Threadline,0,3
+4568f426-89e0-3e22-d3f4-a49b33baba88,2026-10-12,chatgpt,partial,Silk Route Studio,0,1
+4568f426-89e0-3e22-d3f4-a49b33baba88,2026-10-12,chatgpt,partial,Lahore Loom,1,2
+4568f426-89e0-3e22-d3f4-a49b33baba88,2026-10-12,chatgpt,partial,Kurta Co,0,3
+c550eca8-ae62-990c-19bd-4f9378ef7666,2026-10-12,perplexity,won,Lahore Loom,1,1
+c550eca8-ae62-990c-19bd-4f9378ef7666,2026-10-12,perplexity,won,Threadline,0,2
+c550eca8-ae62-990c-19bd-4f9378ef7666,2026-10-12,perplexity,won,Silk Route Studio,0,3
+c4cb294f-e86e-8e63-0f25-477da55990e7,2026-10-12,gemini,won,Lahore Loom,1,1
+c4cb294f-e86e-8e63-0f25-477da55990e7,2026-10-12,gemini,won,Rang Bazaar,0,2
+c9b7c9bc-65a1-6fa9-d611-69a1ff46a6bf,2026-10-12,claude,won,Lahore Loom,1,1
+c9b7c9bc-65a1-6fa9-d611-69a1ff46a6bf,2026-10-12,claude,won,Kurta Co,0,2
+c9b7c9bc-65a1-6fa9-d611-69a1ff46a6bf,2026-10-12,claude,won,Rang Bazaar,0,3
+a42d0cd7-fd35-9f6a-7450-388748d90846,2026-10-12,chatgpt,won,Lahore Loom,1,1
+a42d0cd7-fd35-9f6a-7450-388748d90846,2026-10-12,chatgpt,won,Silk Route Studio,0,2
+a42d0cd7-fd35-9f6a-7450-388748d90846,2026-10-12,chatgpt,won,Kurta Co,0,3
+a5f60735-757b-6b29-bb2a-a1462999394c,2026-10-12,perplexity,lost,Threadline,0,1
+a5f60735-757b-6b29-bb2a-a1462999394c,2026-10-12,perplexity,lost,Kurta Co,0,2
+a5f60735-757b-6b29-bb2a-a1462999394c,2026-10-12,perplexity,lost,Silk Route Studio,0,3
+ab545a15-669d-01ff-1634-725b53f30073,2026-10-12,gemini,won,Lahore Loom,1,1
+ab545a15-669d-01ff-1634-725b53f30073,2026-10-12,gemini,won,Threadline,0,2
+546252e7-f43b-a052-4459-bd6ec0f63229,2026-10-12,claude,won,Lahore Loom,1,1
+546252e7-f43b-a052-4459-bd6ec0f63229,2026-10-12,claude,won,Rang Bazaar,0,2
+546252e7-f43b-a052-4459-bd6ec0f63229,2026-10-12,claude,won,Silk Route Studio,0,3
+546252e7-f43b-a052-4459-bd6ec0f63229,2026-10-12,claude,won,Kurta Co,0,4
+afa28559-67c9-6204-28e3-33b64e8adc4b,2026-10-12,chatgpt,won,Lahore Loom,1,1
+afa28559-67c9-6204-28e3-33b64e8adc4b,2026-10-12,chatgpt,won,Kurta Co,0,2
+afa28559-67c9-6204-28e3-33b64e8adc4b,2026-10-12,chatgpt,won,Threadline,0,3
+afa28559-67c9-6204-28e3-33b64e8adc4b,2026-10-12,chatgpt,won,Rang Bazaar,0,4
+22319050-f515-9494-3818-cfd33889936a,2026-10-12,perplexity,lost,Threadline,0,1
+22319050-f515-9494-3818-cfd33889936a,2026-10-12,perplexity,lost,Kurta Co,0,2
+22319050-f515-9494-3818-cfd33889936a,2026-10-12,perplexity,lost,Silk Route Studio,0,3
+df85c777-9887-4bfe-c136-9c65ae2ae341,2026-10-12,gemini,lost,Kurta Co,0,1
+df85c777-9887-4bfe-c136-9c65ae2ae341,2026-10-12,gemini,lost,Threadline,0,2
+85351a69-dabf-984e-53ff-84612a1f1b61,2026-10-12,claude,won,Lahore Loom,1,1
+85351a69-dabf-984e-53ff-84612a1f1b61,2026-10-12,claude,won,Threadline,0,2
+74f0beae-6a59-43ce-8364-35e321c71aa3,2026-10-12,chatgpt,lost,Silk Route Studio,0,1
+74f0beae-6a59-43ce-8364-35e321c71aa3,2026-10-12,chatgpt,lost,Threadline,0,2
+105291d3-b34c-6c73-5833-0b306c776e95,2026-10-12,perplexity,partial,Threadline,0,1
+105291d3-b34c-6c73-5833-0b306c776e95,2026-10-12,perplexity,partial,Lahore Loom,1,2
+105291d3-b34c-6c73-5833-0b306c776e95,2026-10-12,perplexity,partial,Rang Bazaar,0,3
+e821e716-eac8-0da1-de9f-6f5b72d35458,2026-10-12,gemini,won,Lahore Loom,1,1
+e821e716-eac8-0da1-de9f-6f5b72d35458,2026-10-12,gemini,won,Kurta Co,0,2
+e821e716-eac8-0da1-de9f-6f5b72d35458,2026-10-12,gemini,won,Rang Bazaar,0,3
+e821e716-eac8-0da1-de9f-6f5b72d35458,2026-10-12,gemini,won,Silk Route Studio,0,4
+87623997-649f-7d88-8989-c5abfe2b34d8,2026-10-12,claude,won,Lahore Loom,1,1
+87623997-649f-7d88-8989-c5abfe2b34d8,2026-10-12,claude,won,Rang Bazaar,0,2
+87623997-649f-7d88-8989-c5abfe2b34d8,2026-10-12,claude,won,Silk Route Studio,0,3
+27b608dc-589d-ecb0-75eb-89c23f5cf2f3,2026-10-12,chatgpt,won,Lahore Loom,1,1
+27b608dc-589d-ecb0-75eb-89c23f5cf2f3,2026-10-12,chatgpt,won,Silk Route Studio,0,2
+27b608dc-589d-ecb0-75eb-89c23f5cf2f3,2026-10-12,chatgpt,won,Kurta Co,0,3
+27b608dc-589d-ecb0-75eb-89c23f5cf2f3,2026-10-12,chatgpt,won,Rang Bazaar,0,4
+980cb95c-19d4-5deb-1139-fa1234c1c3ea,2026-10-12,perplexity,won,Lahore Loom,1,1
+980cb95c-19d4-5deb-1139-fa1234c1c3ea,2026-10-12,perplexity,won,Kurta Co,0,2
+980cb95c-19d4-5deb-1139-fa1234c1c3ea,2026-10-12,perplexity,won,Silk Route Studio,0,3
+4a0d2b73-fe54-ee4b-80ff-517323dfecd7,2026-10-12,gemini,won,Lahore Loom,1,1
+4a0d2b73-fe54-ee4b-80ff-517323dfecd7,2026-10-12,gemini,won,Threadline,0,2
+0f9aeb70-4670-7cd6-4ced-a16469df14e9,2026-10-12,claude,lost,Silk Route Studio,0,1
+0f9aeb70-4670-7cd6-4ced-a16469df14e9,2026-10-12,claude,lost,Kurta Co,0,2
+0f9aeb70-4670-7cd6-4ced-a16469df14e9,2026-10-12,claude,lost,Threadline,0,3
+4cc57e0d-2633-2018-6883-ac6e6a944054,2026-10-12,chatgpt,won,Lahore Loom,1,1
+4cc57e0d-2633-2018-6883-ac6e6a944054,2026-10-12,chatgpt,won,Kurta Co,0,2
+4cc57e0d-2633-2018-6883-ac6e6a944054,2026-10-12,chatgpt,won,Silk Route Studio,0,3
+69a53b4f-8ff8-869d-0ec0-713dea2c7a51,2026-10-12,perplexity,partial,Threadline,0,1
+69a53b4f-8ff8-869d-0ec0-713dea2c7a51,2026-10-12,perplexity,partial,Rang Bazaar,0,2
+69a53b4f-8ff8-869d-0ec0-713dea2c7a51,2026-10-12,perplexity,partial,Lahore Loom,1,3
+0d31812e-30c3-6756-d453-f867b97e6224,2026-10-12,gemini,won,Lahore Loom,1,1
+0d31812e-30c3-6756-d453-f867b97e6224,2026-10-12,gemini,won,Kurta Co,0,2
+0d31812e-30c3-6756-d453-f867b97e6224,2026-10-12,gemini,won,Silk Route Studio,0,3
+0d31812e-30c3-6756-d453-f867b97e6224,2026-10-12,gemini,won,Rang Bazaar,0,4
+553d2625-e833-4da5-de95-d6953579c143,2026-10-12,claude,won,Lahore Loom,1,1
+553d2625-e833-4da5-de95-d6953579c143,2026-10-12,claude,won,Kurta Co,0,2
+553d2625-e833-4da5-de95-d6953579c143,2026-10-12,claude,won,Silk Route Studio,0,3
+553d2625-e833-4da5-de95-d6953579c143,2026-10-12,claude,won,Rang Bazaar,0,4
+6589ada1-345a-f934-b42a-2d939aba0f15,2026-10-12,chatgpt,lost,Silk Route Studio,0,1
+6589ada1-345a-f934-b42a-2d939aba0f15,2026-10-12,chatgpt,lost,Threadline,0,2
+6589ada1-345a-f934-b42a-2d939aba0f15,2026-10-12,chatgpt,lost,Rang Bazaar,0,3
+78308631-b8f0-188e-fb37-afaecd8563ca,2026-10-12,perplexity,lost,Threadline,0,1
+78308631-b8f0-188e-fb37-afaecd8563ca,2026-10-12,perplexity,lost,Rang Bazaar,0,2
+78308631-b8f0-188e-fb37-afaecd8563ca,2026-10-12,perplexity,lost,Silk Route Studio,0,3
+95831d58-ef4c-5119-8da5-d39b42c21797,2026-10-12,gemini,partial,Kurta Co,0,1
+95831d58-ef4c-5119-8da5-d39b42c21797,2026-10-12,gemini,partial,Silk Route Studio,0,2
+95831d58-ef4c-5119-8da5-d39b42c21797,2026-10-12,gemini,partial,Rang Bazaar,0,3
+95831d58-ef4c-5119-8da5-d39b42c21797,2026-10-12,gemini,partial,Lahore Loom,1,4
+bd5609c4-a446-1663-b93b-17fbf76d15fd,2026-10-12,claude,won,Lahore Loom,1,1
+bd5609c4-a446-1663-b93b-17fbf76d15fd,2026-10-12,claude,won,Threadline,0,2
+0f09105c-f50d-7a37-a44d-9fecfd85d7fa,2026-10-12,chatgpt,won,Lahore Loom,1,1
+0f09105c-f50d-7a37-a44d-9fecfd85d7fa,2026-10-12,chatgpt,won,Kurta Co,0,2
+37fe032c-0257-1851-26a9-e100b509109b,2026-10-12,perplexity,partial,Threadline,0,1
+37fe032c-0257-1851-26a9-e100b509109b,2026-10-12,perplexity,partial,Kurta Co,0,2
+37fe032c-0257-1851-26a9-e100b509109b,2026-10-12,perplexity,partial,Silk Route Studio,0,3
+37fe032c-0257-1851-26a9-e100b509109b,2026-10-12,perplexity,partial,Lahore Loom,1,4
+ac8d6c7d-b2a6-e468-d02b-124380913ac1,2026-10-12,gemini,lost,Rang Bazaar,0,1
+ac8d6c7d-b2a6-e468-d02b-124380913ac1,2026-10-12,gemini,lost,Kurta Co,0,2
+5f804eeb-143a-9aff-659b-0105cb80f288,2026-10-12,claude,lost,Silk Route Studio,0,1
+5f804eeb-143a-9aff-659b-0105cb80f288,2026-10-12,claude,lost,Kurta Co,0,2
+5f804eeb-143a-9aff-659b-0105cb80f288,2026-10-12,claude,lost,Rang Bazaar,0,3
+8d7dd772-608e-2f5c-6117-727067c0518b,2026-10-19,chatgpt,won,Lahore Loom,1,1
+8d7dd772-608e-2f5c-6117-727067c0518b,2026-10-19,chatgpt,won,Kurta Co,0,2
+1869a217-f94d-8fcb-dba3-496ffa323f69,2026-10-19,perplexity,partial,Rang Bazaar,0,1
+1869a217-f94d-8fcb-dba3-496ffa323f69,2026-10-19,perplexity,partial,Lahore Loom,1,2
+1869a217-f94d-8fcb-dba3-496ffa323f69,2026-10-19,perplexity,partial,Kurta Co,0,3
+1869a217-f94d-8fcb-dba3-496ffa323f69,2026-10-19,perplexity,partial,Silk Route Studio,0,4
+04022b3c-5082-11a5-d9b5-9f84edc3a1c3,2026-10-19,gemini,partial,Kurta Co,0,1
+04022b3c-5082-11a5-d9b5-9f84edc3a1c3,2026-10-19,gemini,partial,Lahore Loom,1,2
+04022b3c-5082-11a5-d9b5-9f84edc3a1c3,2026-10-19,gemini,partial,Threadline,0,3
+b076a7dc-fd0c-e433-ca5e-151b23d3cd4c,2026-10-19,claude,lost,Silk Route Studio,0,1
+b076a7dc-fd0c-e433-ca5e-151b23d3cd4c,2026-10-19,claude,lost,Rang Bazaar,0,2
+fe1a1ba9-c896-9c5b-45f8-c28da255e1bb,2026-10-19,chatgpt,won,Lahore Loom,1,1
+fe1a1ba9-c896-9c5b-45f8-c28da255e1bb,2026-10-19,chatgpt,won,Threadline,0,2
+fe1a1ba9-c896-9c5b-45f8-c28da255e1bb,2026-10-19,chatgpt,won,Silk Route Studio,0,3
+b68e47fa-3f17-5534-cc4d-58194b9dfd58,2026-10-19,perplexity,won,Lahore Loom,1,1
+b68e47fa-3f17-5534-cc4d-58194b9dfd58,2026-10-19,perplexity,won,Rang Bazaar,0,2
+b68e47fa-3f17-5534-cc4d-58194b9dfd58,2026-10-19,perplexity,won,Kurta Co,0,3
+b68e47fa-3f17-5534-cc4d-58194b9dfd58,2026-10-19,perplexity,won,Threadline,0,4
+176de21f-1b46-ebdc-5c56-d9bc5111d31d,2026-10-19,gemini,won,Lahore Loom,1,1
+176de21f-1b46-ebdc-5c56-d9bc5111d31d,2026-10-19,gemini,won,Threadline,0,2
+176de21f-1b46-ebdc-5c56-d9bc5111d31d,2026-10-19,gemini,won,Rang Bazaar,0,3
+8e0370cf-8e96-9227-72e7-6b516e54ac6d,2026-10-19,claude,lost,Threadline,0,1
+8e0370cf-8e96-9227-72e7-6b516e54ac6d,2026-10-19,claude,lost,Rang Bazaar,0,2
+15aede0f-c777-a07f-6346-d4ef69ef74e3,2026-10-19,chatgpt,partial,Silk Route Studio,0,1
+15aede0f-c777-a07f-6346-d4ef69ef74e3,2026-10-19,chatgpt,partial,Kurta Co,0,2
+15aede0f-c777-a07f-6346-d4ef69ef74e3,2026-10-19,chatgpt,partial,Lahore Loom,1,3
+15aede0f-c777-a07f-6346-d4ef69ef74e3,2026-10-19,chatgpt,partial,Rang Bazaar,0,4
+4cbc9044-6bcd-5ce7-46a5-6fe86f46f1b1,2026-10-19,perplexity,lost,Threadline,0,1
+4cbc9044-6bcd-5ce7-46a5-6fe86f46f1b1,2026-10-19,perplexity,lost,Rang Bazaar,0,2
+4cbc9044-6bcd-5ce7-46a5-6fe86f46f1b1,2026-10-19,perplexity,lost,Kurta Co,0,3
+614077d3-9ec4-ea48-d773-f98d550c2fe9,2026-10-19,gemini,partial,Kurta Co,0,1
+614077d3-9ec4-ea48-d773-f98d550c2fe9,2026-10-19,gemini,partial,Lahore Loom,1,2
+614077d3-9ec4-ea48-d773-f98d550c2fe9,2026-10-19,gemini,partial,Threadline,0,3
+7db2a7aa-a205-e54f-b1e8-c09dbc20b9f2,2026-10-19,claude,lost,Rang Bazaar,0,1
+7db2a7aa-a205-e54f-b1e8-c09dbc20b9f2,2026-10-19,claude,lost,Threadline,0,2
+7db2a7aa-a205-e54f-b1e8-c09dbc20b9f2,2026-10-19,claude,lost,Silk Route Studio,0,3
+06e3f949-8cd3-4c62-c482-9b71ae84b81c,2026-10-19,chatgpt,lost,Kurta Co,0,1
+06e3f949-8cd3-4c62-c482-9b71ae84b81c,2026-10-19,chatgpt,lost,Silk Route Studio,0,2
+06e3f949-8cd3-4c62-c482-9b71ae84b81c,2026-10-19,chatgpt,lost,Threadline,0,3
+40afbf3f-3df5-1967-4d86-70bda2224f96,2026-10-19,perplexity,lost,Threadline,0,1
+40afbf3f-3df5-1967-4d86-70bda2224f96,2026-10-19,perplexity,lost,Rang Bazaar,0,2
+40afbf3f-3df5-1967-4d86-70bda2224f96,2026-10-19,perplexity,lost,Kurta Co,0,3
+8972abbd-cff2-b1c4-e53f-9644b39e4df2,2026-10-19,gemini,partial,Rang Bazaar,0,1
+8972abbd-cff2-b1c4-e53f-9644b39e4df2,2026-10-19,gemini,partial,Kurta Co,0,2
+8972abbd-cff2-b1c4-e53f-9644b39e4df2,2026-10-19,gemini,partial,Silk Route Studio,0,3
+8972abbd-cff2-b1c4-e53f-9644b39e4df2,2026-10-19,gemini,partial,Lahore Loom,1,4
+423cad9d-193e-4783-02b3-42541b1f2eb1,2026-10-19,claude,won,Lahore Loom,1,1
+423cad9d-193e-4783-02b3-42541b1f2eb1,2026-10-19,claude,won,Threadline,0,2
+423cad9d-193e-4783-02b3-42541b1f2eb1,2026-10-19,claude,won,Silk Route Studio,0,3
+1ac3bf31-7b96-e2d1-0649-bcf6ff69723d,2026-10-19,chatgpt,won,Lahore Loom,1,1
+1ac3bf31-7b96-e2d1-0649-bcf6ff69723d,2026-10-19,chatgpt,won,Kurta Co,0,2
+1ac3bf31-7b96-e2d1-0649-bcf6ff69723d,2026-10-19,chatgpt,won,Silk Route Studio,0,3
+18fdd2b9-79e5-c9aa-592a-35497ba109d0,2026-10-19,perplexity,partial,Threadline,0,1
+18fdd2b9-79e5-c9aa-592a-35497ba109d0,2026-10-19,perplexity,partial,Rang Bazaar,0,2
+18fdd2b9-79e5-c9aa-592a-35497ba109d0,2026-10-19,perplexity,partial,Kurta Co,0,3
+18fdd2b9-79e5-c9aa-592a-35497ba109d0,2026-10-19,perplexity,partial,Lahore Loom,1,4
+3e711433-bd90-b81a-fbe0-e6b8ee0f65a8,2026-10-19,gemini,partial,Kurta Co,0,1
+3e711433-bd90-b81a-fbe0-e6b8ee0f65a8,2026-10-19,gemini,partial,Threadline,0,2
+3e711433-bd90-b81a-fbe0-e6b8ee0f65a8,2026-10-19,gemini,partial,Lahore Loom,1,3
+3e711433-bd90-b81a-fbe0-e6b8ee0f65a8,2026-10-19,gemini,partial,Rang Bazaar,0,4
+3283daa4-e212-ab7c-9d36-1cb6bcc57be0,2026-10-19,claude,won,Lahore Loom,1,1
+3283daa4-e212-ab7c-9d36-1cb6bcc57be0,2026-10-19,claude,won,Silk Route Studio,0,2
+3283daa4-e212-ab7c-9d36-1cb6bcc57be0,2026-10-19,claude,won,Threadline,0,3
+3283daa4-e212-ab7c-9d36-1cb6bcc57be0,2026-10-19,claude,won,Kurta Co,0,4
+89718eea-df3a-098a-ccac-2fb51a0c6c04,2026-10-19,chatgpt,won,Lahore Loom,1,1
+89718eea-df3a-098a-ccac-2fb51a0c6c04,2026-10-19,chatgpt,won,Rang Bazaar,0,2
+9645f0e4-647d-c392-9c7e-b575637ddcd6,2026-10-19,perplexity,won,Lahore Loom,1,1
+9645f0e4-647d-c392-9c7e-b575637ddcd6,2026-10-19,perplexity,won,Rang Bazaar,0,2
+9645f0e4-647d-c392-9c7e-b575637ddcd6,2026-10-19,perplexity,won,Threadline,0,3
+9645f0e4-647d-c392-9c7e-b575637ddcd6,2026-10-19,perplexity,won,Kurta Co,0,4
+3d131a3d-1e2c-2e7d-502c-f0ee224a66a6,2026-10-19,gemini,won,Lahore Loom,1,1
+3d131a3d-1e2c-2e7d-502c-f0ee224a66a6,2026-10-19,gemini,won,Silk Route Studio,0,2
+3d131a3d-1e2c-2e7d-502c-f0ee224a66a6,2026-10-19,gemini,won,Threadline,0,3
+3d131a3d-1e2c-2e7d-502c-f0ee224a66a6,2026-10-19,gemini,won,Rang Bazaar,0,4
+a2b03c4b-7c96-6b55-2f8d-8ded6c4c450b,2026-10-19,claude,partial,Rang Bazaar,0,1
+a2b03c4b-7c96-6b55-2f8d-8ded6c4c450b,2026-10-19,claude,partial,Lahore Loom,1,2
+a2b03c4b-7c96-6b55-2f8d-8ded6c4c450b,2026-10-19,claude,partial,Kurta Co,0,3
+a2b03c4b-7c96-6b55-2f8d-8ded6c4c450b,2026-10-19,claude,partial,Silk Route Studio,0,4
+22f3f068-7c0f-549d-0274-0f73f3abea0d,2026-10-19,chatgpt,won,Lahore Loom,1,1
+22f3f068-7c0f-549d-0274-0f73f3abea0d,2026-10-19,chatgpt,won,Threadline,0,2
+22f3f068-7c0f-549d-0274-0f73f3abea0d,2026-10-19,chatgpt,won,Kurta Co,0,3
+07e67cb0-90bd-e900-1529-e6f52ad11fe8,2026-10-19,perplexity,lost,Threadline,0,1
+07e67cb0-90bd-e900-1529-e6f52ad11fe8,2026-10-19,perplexity,lost,Rang Bazaar,0,2
+8b0901ab-c66d-ceb3-4494-5e091d3ca5a4,2026-10-19,gemini,lost,Kurta Co,0,1
+8b0901ab-c66d-ceb3-4494-5e091d3ca5a4,2026-10-19,gemini,lost,Rang Bazaar,0,2
+7321a8b2-0840-405a-ffd2-f491dff389aa,2026-10-19,claude,won,Lahore Loom,1,1
+7321a8b2-0840-405a-ffd2-f491dff389aa,2026-10-19,claude,won,Silk Route Studio,0,2
+34e50699-c8eb-e27a-23a4-e70e9dbc15c0,2026-10-19,chatgpt,lost,Rang Bazaar,0,1
+34e50699-c8eb-e27a-23a4-e70e9dbc15c0,2026-10-19,chatgpt,lost,Threadline,0,2
+34e50699-c8eb-e27a-23a4-e70e9dbc15c0,2026-10-19,chatgpt,lost,Kurta Co,0,3
+83b0b35c-dba6-fdf8-f3d0-4ffb44709848,2026-10-19,perplexity,lost,Threadline,0,1
+83b0b35c-dba6-fdf8-f3d0-4ffb44709848,2026-10-19,perplexity,lost,Silk Route Studio,0,2
+83b0b35c-dba6-fdf8-f3d0-4ffb44709848,2026-10-19,perplexity,lost,Rang Bazaar,0,3
+5274ee11-b61d-f906-2570-35db3fead90a,2026-10-19,gemini,partial,Silk Route Studio,0,1
+5274ee11-b61d-f906-2570-35db3fead90a,2026-10-19,gemini,partial,Threadline,0,2
+5274ee11-b61d-f906-2570-35db3fead90a,2026-10-19,gemini,partial,Kurta Co,0,3
+5274ee11-b61d-f906-2570-35db3fead90a,2026-10-19,gemini,partial,Lahore Loom,1,4
+17d50f59-c4d5-98f7-e14f-e093cb6ad0c7,2026-10-19,claude,won,Lahore Loom,1,1
+17d50f59-c4d5-98f7-e14f-e093cb6ad0c7,2026-10-19,claude,won,Threadline,0,2
+17d50f59-c4d5-98f7-e14f-e093cb6ad0c7,2026-10-19,claude,won,Kurta Co,0,3
+755cee2a-f8de-d777-bb1e-5ae817d821b8,2026-10-19,chatgpt,lost,Silk Route Studio,0,1
+755cee2a-f8de-d777-bb1e-5ae817d821b8,2026-10-19,chatgpt,lost,Rang Bazaar,0,2
+90eeb067-216e-9fe5-93f3-75968c1c8b05,2026-10-19,perplexity,partial,Kurta Co,0,1
+90eeb067-216e-9fe5-93f3-75968c1c8b05,2026-10-19,perplexity,partial,Silk Route Studio,0,2
+90eeb067-216e-9fe5-93f3-75968c1c8b05,2026-10-19,perplexity,partial,Lahore Loom,1,3
+f54191ea-fde9-1c42-002c-4c2274de5f70,2026-10-19,gemini,lost,Rang Bazaar,0,1
+f54191ea-fde9-1c42-002c-4c2274de5f70,2026-10-19,gemini,lost,Silk Route Studio,0,2
+a61f0b96-e75f-745a-aa1d-3fc65f31273d,2026-10-19,claude,won,Lahore Loom,1,1
+a61f0b96-e75f-745a-aa1d-3fc65f31273d,2026-10-19,claude,won,Threadline,0,2
+a61f0b96-e75f-745a-aa1d-3fc65f31273d,2026-10-19,claude,won,Kurta Co,0,3
+a61f0b96-e75f-745a-aa1d-3fc65f31273d,2026-10-19,claude,won,Silk Route Studio,0,4
+185df528-b425-8e19-1758-d47ea7cde143,2026-10-19,chatgpt,won,Lahore Loom,1,1
+185df528-b425-8e19-1758-d47ea7cde143,2026-10-19,chatgpt,won,Kurta Co,0,2
+185df528-b425-8e19-1758-d47ea7cde143,2026-10-19,chatgpt,won,Silk Route Studio,0,3
+185df528-b425-8e19-1758-d47ea7cde143,2026-10-19,chatgpt,won,Threadline,0,4
+1edf3bfa-d12e-0eb5-57f4-79b5b212a6ee,2026-10-19,perplexity,partial,Threadline,0,1
+1edf3bfa-d12e-0eb5-57f4-79b5b212a6ee,2026-10-19,perplexity,partial,Lahore Loom,1,2
+1edf3bfa-d12e-0eb5-57f4-79b5b212a6ee,2026-10-19,perplexity,partial,Rang Bazaar,0,3
+d038e153-c601-818b-61fa-01ba231ae7c7,2026-10-19,gemini,lost,Threadline,0,1
+d038e153-c601-818b-61fa-01ba231ae7c7,2026-10-19,gemini,lost,Silk Route Studio,0,2
+26c0747e-bf8e-8bfa-a0c9-da72368acd40,2026-10-19,claude,lost,Silk Route Studio,0,1
+26c0747e-bf8e-8bfa-a0c9-da72368acd40,2026-10-19,claude,lost,Rang Bazaar,0,2
+3f6eed9d-23cb-e943-ca84-000350834fef,2026-10-19,chatgpt,won,Lahore Loom,1,1
+3f6eed9d-23cb-e943-ca84-000350834fef,2026-10-19,chatgpt,won,Silk Route Studio,0,2
+3f6eed9d-23cb-e943-ca84-000350834fef,2026-10-19,chatgpt,won,Kurta Co,0,3
+3f6eed9d-23cb-e943-ca84-000350834fef,2026-10-19,chatgpt,won,Rang Bazaar,0,4
+bf72ae52-304b-2370-8270-12389b5f8f39,2026-10-19,perplexity,partial,Threadline,0,1
+bf72ae52-304b-2370-8270-12389b5f8f39,2026-10-19,perplexity,partial,Rang Bazaar,0,2
+bf72ae52-304b-2370-8270-12389b5f8f39,2026-10-19,perplexity,partial,Lahore Loom,1,3
+bf72ae52-304b-2370-8270-12389b5f8f39,2026-10-19,perplexity,partial,Silk Route Studio,0,4
+6307d4d1-21c9-a15d-5104-5a16ef15ab72,2026-10-19,gemini,lost,Kurta Co,0,1
+6307d4d1-21c9-a15d-5104-5a16ef15ab72,2026-10-19,gemini,lost,Rang Bazaar,0,2
+6307d4d1-21c9-a15d-5104-5a16ef15ab72,2026-10-19,gemini,lost,Threadline,0,3
+ec2e2815-0a32-17d2-373a-edf8431e930f,2026-10-19,claude,won,Lahore Loom,1,1
+ec2e2815-0a32-17d2-373a-edf8431e930f,2026-10-19,claude,won,Threadline,0,2
+ec2e2815-0a32-17d2-373a-edf8431e930f,2026-10-19,claude,won,Kurta Co,0,3
+ec2e2815-0a32-17d2-373a-edf8431e930f,2026-10-19,claude,won,Silk Route Studio,0,4
+895c4fde-a3fa-4069-1519-fd3866fba71d,2026-10-19,chatgpt,won,Lahore Loom,1,1
+895c4fde-a3fa-4069-1519-fd3866fba71d,2026-10-19,chatgpt,won,Silk Route Studio,0,2
+895c4fde-a3fa-4069-1519-fd3866fba71d,2026-10-19,chatgpt,won,Threadline,0,3
+9620bee6-6406-face-53a5-e8508950ddd6,2026-10-19,perplexity,lost,Silk Route Studio,0,1
+9620bee6-6406-face-53a5-e8508950ddd6,2026-10-19,perplexity,lost,Kurta Co,0,2
+9620bee6-6406-face-53a5-e8508950ddd6,2026-10-19,perplexity,lost,Threadline,0,3
+1db14bfc-6f3a-5115-ecb4-678c16120aa6,2026-10-19,gemini,partial,Kurta Co,0,1
+1db14bfc-6f3a-5115-ecb4-678c16120aa6,2026-10-19,gemini,partial,Lahore Loom,1,2
+1db14bfc-6f3a-5115-ecb4-678c16120aa6,2026-10-19,gemini,partial,Rang Bazaar,0,3
+c7f7bda1-bff1-5840-207e-863f5f32d5d8,2026-10-19,claude,lost,Silk Route Studio,0,1
+c7f7bda1-bff1-5840-207e-863f5f32d5d8,2026-10-19,claude,lost,Kurta Co,0,2
+c7f7bda1-bff1-5840-207e-863f5f32d5d8,2026-10-19,claude,lost,Rang Bazaar,0,3
+0e3141ec-5c31-1464-82c2-99f07487d772,2026-10-19,chatgpt,won,Lahore Loom,1,1
+0e3141ec-5c31-1464-82c2-99f07487d772,2026-10-19,chatgpt,won,Silk Route Studio,0,2
+0e3141ec-5c31-1464-82c2-99f07487d772,2026-10-19,chatgpt,won,Threadline,0,3
+0b461173-00a8-5473-8242-5912bda3c162,2026-10-19,perplexity,lost,Threadline,0,1
+0b461173-00a8-5473-8242-5912bda3c162,2026-10-19,perplexity,lost,Rang Bazaar,0,2
+0b461173-00a8-5473-8242-5912bda3c162,2026-10-19,perplexity,lost,Silk Route Studio,0,3
+6a8fcacb-3f8e-2d0d-5261-9dec3979d5f5,2026-10-19,gemini,lost,Kurta Co,0,1
+6a8fcacb-3f8e-2d0d-5261-9dec3979d5f5,2026-10-19,gemini,lost,Rang Bazaar,0,2
+ddb449dc-7710-6966-e082-7f7611a529b4,2026-10-19,claude,won,Lahore Loom,1,1
+ddb449dc-7710-6966-e082-7f7611a529b4,2026-10-19,claude,won,Rang Bazaar,0,2
+ddb449dc-7710-6966-e082-7f7611a529b4,2026-10-19,claude,won,Threadline,0,3
+ddb449dc-7710-6966-e082-7f7611a529b4,2026-10-19,claude,won,Kurta Co,0,4
+bd54da04-4dcd-0009-c8d5-77179055a36f,2026-10-19,chatgpt,lost,Kurta Co,0,1
+bd54da04-4dcd-0009-c8d5-77179055a36f,2026-10-19,chatgpt,lost,Threadline,0,2
+3ba5bd76-061e-fb95-68f8-2063eeb19ad2,2026-10-19,perplexity,partial,Threadline,0,1
+3ba5bd76-061e-fb95-68f8-2063eeb19ad2,2026-10-19,perplexity,partial,Silk Route Studio,0,2
+3ba5bd76-061e-fb95-68f8-2063eeb19ad2,2026-10-19,perplexity,partial,Kurta Co,0,3
+3ba5bd76-061e-fb95-68f8-2063eeb19ad2,2026-10-19,perplexity,partial,Lahore Loom,1,4
+6b790d01-3cf8-8d20-fbad-793f87a1ec02,2026-10-19,gemini,partial,Threadline,0,1
+6b790d01-3cf8-8d20-fbad-793f87a1ec02,2026-10-19,gemini,partial,Lahore Loom,1,2
+6b790d01-3cf8-8d20-fbad-793f87a1ec02,2026-10-19,gemini,partial,Rang Bazaar,0,3
+8163b6ce-1877-bc06-94ad-625215bc2a3e,2026-10-19,claude,won,Lahore Loom,1,1
+8163b6ce-1877-bc06-94ad-625215bc2a3e,2026-10-19,claude,won,Kurta Co,0,2
+8163b6ce-1877-bc06-94ad-625215bc2a3e,2026-10-19,claude,won,Silk Route Studio,0,3
+50a46c85-d9d5-7b02-42d0-4d554aab47b2,2026-10-19,chatgpt,lost,Kurta Co,0,1
+50a46c85-d9d5-7b02-42d0-4d554aab47b2,2026-10-19,chatgpt,lost,Threadline,0,2
+50a46c85-d9d5-7b02-42d0-4d554aab47b2,2026-10-19,chatgpt,lost,Silk Route Studio,0,3
+7316ce64-2a14-7a96-1b0c-62eb27c8fc6c,2026-10-19,perplexity,lost,Threadline,0,1
+7316ce64-2a14-7a96-1b0c-62eb27c8fc6c,2026-10-19,perplexity,lost,Kurta Co,0,2
+d38e13e4-4de1-087b-afa1-4a55cebeabaa,2026-10-19,gemini,partial,Kurta Co,0,1
+d38e13e4-4de1-087b-afa1-4a55cebeabaa,2026-10-19,gemini,partial,Lahore Loom,1,2
+d38e13e4-4de1-087b-afa1-4a55cebeabaa,2026-10-19,gemini,partial,Rang Bazaar,0,3
+2c82989f-fd9c-fbb0-d1f1-6485429a4a7c,2026-10-19,claude,won,Lahore Loom,1,1
+2c82989f-fd9c-fbb0-d1f1-6485429a4a7c,2026-10-19,claude,won,Silk Route Studio,0,2
+c7ecfe71-d493-47fc-0fc9-8d2e030f9be9,2026-10-19,chatgpt,lost,Threadline,0,1
+c7ecfe71-d493-47fc-0fc9-8d2e030f9be9,2026-10-19,chatgpt,lost,Kurta Co,0,2
+7184b713-a55f-65b7-e709-fba6329fc417,2026-10-19,perplexity,lost,Threadline,0,1
+7184b713-a55f-65b7-e709-fba6329fc417,2026-10-19,perplexity,lost,Rang Bazaar,0,2
+6d39da75-aee7-0ab2-61fa-8e7a078c26ce,2026-10-19,gemini,won,Lahore Loom,1,1
+6d39da75-aee7-0ab2-61fa-8e7a078c26ce,2026-10-19,gemini,won,Silk Route Studio,0,2
+6d39da75-aee7-0ab2-61fa-8e7a078c26ce,2026-10-19,gemini,won,Rang Bazaar,0,3
+3eebc04a-9df2-372e-9e82-5aae9d3616a1,2026-10-19,claude,partial,Silk Route Studio,0,1
+3eebc04a-9df2-372e-9e82-5aae9d3616a1,2026-10-19,claude,partial,Threadline,0,2
+3eebc04a-9df2-372e-9e82-5aae9d3616a1,2026-10-19,claude,partial,Lahore Loom,1,3
+b69f75c5-c82b-a1be-61eb-64e6fd498e20,2026-10-19,chatgpt,won,Lahore Loom,1,1
+b69f75c5-c82b-a1be-61eb-64e6fd498e20,2026-10-19,chatgpt,won,Threadline,0,2
+b69f75c5-c82b-a1be-61eb-64e6fd498e20,2026-10-19,chatgpt,won,Silk Route Studio,0,3
+e550d736-0780-6e71-3811-b51998dc9e0b,2026-10-19,perplexity,lost,Threadline,0,1
+e550d736-0780-6e71-3811-b51998dc9e0b,2026-10-19,perplexity,lost,Kurta Co,0,2
+cc21cbdb-fb8f-e8c4-d8b4-8ead93608edf,2026-10-19,gemini,won,Lahore Loom,1,1
+cc21cbdb-fb8f-e8c4-d8b4-8ead93608edf,2026-10-19,gemini,won,Rang Bazaar,0,2
+cc21cbdb-fb8f-e8c4-d8b4-8ead93608edf,2026-10-19,gemini,won,Silk Route Studio,0,3
+cc21cbdb-fb8f-e8c4-d8b4-8ead93608edf,2026-10-19,gemini,won,Threadline,0,4
+91519998-f293-3585-5a07-d758b357f3f9,2026-10-19,claude,partial,Silk Route Studio,0,1
+91519998-f293-3585-5a07-d758b357f3f9,2026-10-19,claude,partial,Lahore Loom,1,2
+91519998-f293-3585-5a07-d758b357f3f9,2026-10-19,claude,partial,Rang Bazaar,0,3
+91519998-f293-3585-5a07-d758b357f3f9,2026-10-19,claude,partial,Kurta Co,0,4
+54ec84ce-002c-cb25-7a5d-7c8286c5547c,2026-10-19,chatgpt,lost,Threadline,0,1
+54ec84ce-002c-cb25-7a5d-7c8286c5547c,2026-10-19,chatgpt,lost,Rang Bazaar,0,2
+24435958-eacf-33a9-b466-fab6962c04dd,2026-10-19,perplexity,lost,Silk Route Studio,0,1
+24435958-eacf-33a9-b466-fab6962c04dd,2026-10-19,perplexity,lost,Rang Bazaar,0,2
+24435958-eacf-33a9-b466-fab6962c04dd,2026-10-19,perplexity,lost,Threadline,0,3
+bb7b6c05-2852-2ca2-f9d2-014a22ee7f07,2026-10-19,gemini,lost,Silk Route Studio,0,1
+bb7b6c05-2852-2ca2-f9d2-014a22ee7f07,2026-10-19,gemini,lost,Threadline,0,2
+60ddc7f1-2ce3-d822-d080-12b896c56fe7,2026-10-19,claude,won,Lahore Loom,1,1
+60ddc7f1-2ce3-d822-d080-12b896c56fe7,2026-10-19,claude,won,Kurta Co,0,2
+60ddc7f1-2ce3-d822-d080-12b896c56fe7,2026-10-19,claude,won,Rang Bazaar,0,3
+60ddc7f1-2ce3-d822-d080-12b896c56fe7,2026-10-19,claude,won,Threadline,0,4
+cf0df860-ebc9-2914-5176-a9d19a3624d6,2026-10-19,chatgpt,partial,Threadline,0,1
+cf0df860-ebc9-2914-5176-a9d19a3624d6,2026-10-19,chatgpt,partial,Silk Route Studio,0,2
+cf0df860-ebc9-2914-5176-a9d19a3624d6,2026-10-19,chatgpt,partial,Kurta Co,0,3
+cf0df860-ebc9-2914-5176-a9d19a3624d6,2026-10-19,chatgpt,partial,Lahore Loom,1,4
+d2586d90-16b6-bf61-f68c-62e6e2a45909,2026-10-19,perplexity,partial,Threadline,0,1
+d2586d90-16b6-bf61-f68c-62e6e2a45909,2026-10-19,perplexity,partial,Lahore Loom,1,2
+d2586d90-16b6-bf61-f68c-62e6e2a45909,2026-10-19,perplexity,partial,Kurta Co,0,3
+bb8aa843-702f-31e5-62cc-c6040c53644b,2026-10-19,gemini,lost,Threadline,0,1
+bb8aa843-702f-31e5-62cc-c6040c53644b,2026-10-19,gemini,lost,Kurta Co,0,2
+bb8aa843-702f-31e5-62cc-c6040c53644b,2026-10-19,gemini,lost,Rang Bazaar,0,3
+d883e3f8-cc98-03de-12de-9e5a7387928a,2026-10-19,claude,won,Lahore Loom,1,1
+d883e3f8-cc98-03de-12de-9e5a7387928a,2026-10-19,claude,won,Rang Bazaar,0,2
+8c0b393a-1333-5bc9-bb63-5ff529310971,2026-10-19,chatgpt,lost,Rang Bazaar,0,1
+8c0b393a-1333-5bc9-bb63-5ff529310971,2026-10-19,chatgpt,lost,Threadline,0,2
+f9722cc1-349e-f4a9-54c2-9d5c19ec0829,2026-10-19,perplexity,partial,Threadline,0,1
+f9722cc1-349e-f4a9-54c2-9d5c19ec0829,2026-10-19,perplexity,partial,Lahore Loom,1,2
+f9722cc1-349e-f4a9-54c2-9d5c19ec0829,2026-10-19,perplexity,partial,Kurta Co,0,3
+f9722cc1-349e-f4a9-54c2-9d5c19ec0829,2026-10-19,perplexity,partial,Silk Route Studio,0,4
+166ecfe3-6d77-9595-00fa-0eb45c5f48d4,2026-10-19,gemini,won,Lahore Loom,1,1
+166ecfe3-6d77-9595-00fa-0eb45c5f48d4,2026-10-19,gemini,won,Kurta Co,0,2
+c8edabdd-4ef0-3f80-1d91-fe39d8014004,2026-10-19,claude,won,Lahore Loom,1,1
+c8edabdd-4ef0-3f80-1d91-fe39d8014004,2026-10-19,claude,won,Threadline,0,2
+2fc3e649-5e91-1b91-61a6-6444e2afa629,2026-10-19,chatgpt,won,Lahore Loom,1,1
+2fc3e649-5e91-1b91-61a6-6444e2afa629,2026-10-19,chatgpt,won,Threadline,0,2
+2fc3e649-5e91-1b91-61a6-6444e2afa629,2026-10-19,chatgpt,won,Rang Bazaar,0,3
+18c180d2-aadf-3692-b24b-eb96c0927b74,2026-10-19,perplexity,won,Lahore Loom,1,1
+18c180d2-aadf-3692-b24b-eb96c0927b74,2026-10-19,perplexity,won,Threadline,0,2
+18c180d2-aadf-3692-b24b-eb96c0927b74,2026-10-19,perplexity,won,Kurta Co,0,3
+18c180d2-aadf-3692-b24b-eb96c0927b74,2026-10-19,perplexity,won,Rang Bazaar,0,4
+f7336094-6b2b-78b9-85c7-f3bed183010f,2026-10-19,gemini,partial,Rang Bazaar,0,1
+f7336094-6b2b-78b9-85c7-f3bed183010f,2026-10-19,gemini,partial,Silk Route Studio,0,2
+f7336094-6b2b-78b9-85c7-f3bed183010f,2026-10-19,gemini,partial,Lahore Loom,1,3
+f7336094-6b2b-78b9-85c7-f3bed183010f,2026-10-19,gemini,partial,Threadline,0,4
+2c41cbd3-72f4-44ab-c1d7-1f4af3025d16,2026-10-19,claude,partial,Threadline,0,1
+2c41cbd3-72f4-44ab-c1d7-1f4af3025d16,2026-10-19,claude,partial,Lahore Loom,1,2
+2c41cbd3-72f4-44ab-c1d7-1f4af3025d16,2026-10-19,claude,partial,Silk Route Studio,0,3
+ea074d80-ba23-6c22-e92a-7b9751db1a37,2026-10-19,chatgpt,lost,Threadline,0,1
+ea074d80-ba23-6c22-e92a-7b9751db1a37,2026-10-19,chatgpt,lost,Kurta Co,0,2
+ea074d80-ba23-6c22-e92a-7b9751db1a37,2026-10-19,chatgpt,lost,Silk Route Studio,0,3
+25f06b0a-264e-f59d-6a18-e5af1cce08e9,2026-10-19,perplexity,lost,Threadline,0,1
+25f06b0a-264e-f59d-6a18-e5af1cce08e9,2026-10-19,perplexity,lost,Silk Route Studio,0,2
+9be4f19f-9270-1d60-7c4f-48e4a7a02a3d,2026-10-19,gemini,partial,Threadline,0,1
+9be4f19f-9270-1d60-7c4f-48e4a7a02a3d,2026-10-19,gemini,partial,Rang Bazaar,0,2
+9be4f19f-9270-1d60-7c4f-48e4a7a02a3d,2026-10-19,gemini,partial,Lahore Loom,1,3
+9be4f19f-9270-1d60-7c4f-48e4a7a02a3d,2026-10-19,gemini,partial,Kurta Co,0,4
+cb2cc805-d140-3430-567e-642e052dfb9a,2026-10-19,claude,won,Lahore Loom,1,1
+cb2cc805-d140-3430-567e-642e052dfb9a,2026-10-19,claude,won,Rang Bazaar,0,2
+a543148e-9adf-e981-6ab1-9e15ba92992e,2026-10-19,chatgpt,won,Lahore Loom,1,1
+a543148e-9adf-e981-6ab1-9e15ba92992e,2026-10-19,chatgpt,won,Silk Route Studio,0,2
+a543148e-9adf-e981-6ab1-9e15ba92992e,2026-10-19,chatgpt,won,Kurta Co,0,3
+a543148e-9adf-e981-6ab1-9e15ba92992e,2026-10-19,chatgpt,won,Threadline,0,4
+4fa5c35e-10cc-4604-28b2-6b1bca9f1d59,2026-10-19,perplexity,partial,Threadline,0,1
+4fa5c35e-10cc-4604-28b2-6b1bca9f1d59,2026-10-19,perplexity,partial,Lahore Loom,1,2
+4fa5c35e-10cc-4604-28b2-6b1bca9f1d59,2026-10-19,perplexity,partial,Silk Route Studio,0,3
+5e4c4fd1-4623-63a9-32f8-dbabb462e3e8,2026-10-19,gemini,partial,Kurta Co,0,1
+5e4c4fd1-4623-63a9-32f8-dbabb462e3e8,2026-10-19,gemini,partial,Silk Route Studio,0,2
+5e4c4fd1-4623-63a9-32f8-dbabb462e3e8,2026-10-19,gemini,partial,Lahore Loom,1,3
+42378962-e4fd-6c34-d670-7a2129dc073e,2026-10-19,claude,partial,Silk Route Studio,0,1
+42378962-e4fd-6c34-d670-7a2129dc073e,2026-10-19,claude,partial,Rang Bazaar,0,2
+42378962-e4fd-6c34-d670-7a2129dc073e,2026-10-19,claude,partial,Threadline,0,3
+42378962-e4fd-6c34-d670-7a2129dc073e,2026-10-19,claude,partial,Lahore Loom,1,4
+a6ce6d7a-44e2-a94b-34ec-5264ad7d6f81,2026-10-19,chatgpt,won,Lahore Loom,1,1
+a6ce6d7a-44e2-a94b-34ec-5264ad7d6f81,2026-10-19,chatgpt,won,Kurta Co,0,2
+a6ce6d7a-44e2-a94b-34ec-5264ad7d6f81,2026-10-19,chatgpt,won,Rang Bazaar,0,3
+ce1a1669-9bbc-6cbc-409c-a8f23948fe22,2026-10-19,perplexity,lost,Threadline,0,1
+ce1a1669-9bbc-6cbc-409c-a8f23948fe22,2026-10-19,perplexity,lost,Kurta Co,0,2
+ce1a1669-9bbc-6cbc-409c-a8f23948fe22,2026-10-19,perplexity,lost,Silk Route Studio,0,3
+d30608be-8548-867b-ad5c-ba244d59616b,2026-10-19,gemini,partial,Kurta Co,0,1
+d30608be-8548-867b-ad5c-ba244d59616b,2026-10-19,gemini,partial,Lahore Loom,1,2
+d30608be-8548-867b-ad5c-ba244d59616b,2026-10-19,gemini,partial,Rang Bazaar,0,3
+d30608be-8548-867b-ad5c-ba244d59616b,2026-10-19,gemini,partial,Silk Route Studio,0,4
+f3c2944a-b60a-3dcc-a7f7-745142da8609,2026-10-19,claude,lost,Threadline,0,1
+f3c2944a-b60a-3dcc-a7f7-745142da8609,2026-10-19,claude,lost,Silk Route Studio,0,2

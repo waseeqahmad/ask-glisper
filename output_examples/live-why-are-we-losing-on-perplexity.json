@@ -1,0 +1,132 @@
+{
+  "run_id": "20261027-120009-837ed1",
+  "question": "Why are we losing on Perplexity?",
+  "answer": "Lahore Loom holds only 13.9% of first-place mentions on Perplexity (10 occurrences) compared to Threadline's 72.2% (52 occurrences). In answers where Lahore Loom does not win, third-party domains such as lahorestyleguide.pk (cited in 85.2% of losses, 0% of wins), reddit.com (59.0% losses, 0% wins), and daraz.pk (47.5% losses, 50% wins) appear far more often, while winning answers cite only lahoreloom.pk (100% wins). Dawn.com, youtube.com, and instagram.com also appear in both loss and win answers but with higher presence in losses.",
+  "action": "Pitch a brand feature to lahorestyleguide.pk this week to gain citations on the domain that appears in 85.2% of Perplexity answers where Lahore Loom loses.",
+  "confidence": "medium",
+  "score": 8,
+  "passed": true,
+  "retries": 0,
+  "evidence": [
+    {
+      "skill": "competitor_gap",
+      "sql": "SELECT winner AS competitor,\n       COUNT(*) AS frequency,\n       ROUND(100.0 * COUNT(*) / (SELECT COUNT(*) FROM GLISPER_DEMO.answers WHERE engine = 'perplexity'), 1) AS share_pct\nFROM GLISPER_DEMO.answers\nWHERE engine = 'perplexity'\n  AND winner <> 'Kurta Co'\nGROUP BY winner\nORDER BY frequency DESC LIMIT 200",
+      "rows": [
+        {
+          "competitor": "Threadline",
+          "frequency": 52,
+          "share_pct": 72.2
+        },
+        {
+          "competitor": "Lahore Loom",
+          "frequency": 10,
+          "share_pct": 13.9
+        },
+        {
+          "competitor": "Rang Bazaar",
+          "frequency": 6,
+          "share_pct": 8.3
+        },
+        {
+          "competitor": "Silk Route Studio",
+          "frequency": 3,
+          "share_pct": 4.2
+        }
+      ],
+      "backend": "zetaris"
+    },
+    {
+      "skill": "source_gap",
+      "sql": "WITH filtered AS (\n  SELECT a.result_id,\n         a.run_date,\n         a.engine,\n         a.status\n  FROM GLISPER_DEMO.answers a\n  WHERE a.engine = 'perplexity'\n    AND a.winner <> 'Kurta Co'\n),\nanswer_domains AS (\n  SELECT DISTINCT f.result_id,\n         f.run_date,\n         f.status,\n         s.domain\n  FROM filtered f\n  JOIN GLISPER_DEMO.answer_sources s\n    ON f.result_id = s.result_id\n   AND f.run_date = s.run_date\n   AND f.engine = s.engine\n),\ntotals AS (\n  SELECT\n    SUM(CASE WHEN status = 'won' THEN 1 ELSE 0 END) AS total_won,\n    SUM(CASE WHEN status <> 'won' THEN 1 ELSE 0 END) AS total_not_won\n  FROM (SELECT DISTINCT result_id, run_date, status FROM filtered) t\n),\ndomain_stats AS (\n  SELECT\n    domain,\n    SUM(CASE WHEN status = 'won' THEN 1 ELSE 0 END) AS won_citations,\n    SUM(CASE WHEN status <> 'won' THEN 1 ELSE 0 END) AS not_won_citations\n  FROM (SELECT DISTINCT result_id, run_date, status, domain FROM answer_domains) d\n  GROUP BY domain\n)\nSELECT\n  ds.domain,\n  ROUND(100.0 * ds.not_won_citations / t.total_not_won, 1) AS not_won_pct,\n  ROUND(100.0 * ds.won_citations / t.total_won, 1) AS won_pct\nFROM domain_stats ds\nCROSS JOIN totals t\nWHERE t.total_not_won > 0 AND t.total_won > 0\nORDER BY not_won_pct DESC, won_pct ASC LIMIT 200",
+      "rows": [
+        {
+          "domain": "threadline.pk",
+          "not_won_pct": 85.2,
+          "won_pct": 0.0
+        },
+        {
+          "domain": "lahorestyleguide.pk",
+          "not_won_pct": 85.2,
+          "won_pct": 0.0
+        },
+        {
+          "domain": "reddit.com",
+          "not_won_pct": 59.0,
+          "won_pct": 0.0
+        },
+        {
+          "domain": "dawn.com",
+          "not_won_pct": 47.5,
+          "won_pct": 40.0
+        },
+        {
+          "domain": "daraz.pk",
+          "not_won_pct": 47.5,
+          "won_pct": 50.0
+        },
+        {
+          "domain": "youtube.com",
+          "not_won_pct": 32.8,
+          "won_pct": 30.0
+        },
+        {
+          "domain": "instagram.com",
+          "not_won_pct": 29.5,
+          "won_pct": 40.0
+        },
+        {
+          "domain": "rangbazaar.pk",
+          "not_won_pct": 9.8,
+          "won_pct": 0.0
+        },
+        {
+          "domain": "silkroutestudio.pk",
+          "not_won_pct": 4.9,
+          "won_pct": 0.0
+        },
+        {
+          "domain": "lahoreloom.pk",
+          "not_won_pct": 0.0,
+          "won_pct": 100.0
+        }
+      ],
+      "backend": "zetaris"
+    }
+  ],
+  "quotes": [
+    {
+      "result_id": "1edf3bfa-d12e-0eb5-57f4-79b5b212a6ee",
+      "date": "2026-10-19",
+      "engine": "perplexity",
+      "prompt": "where to buy embroidered kurtis in Lahore",
+      "quote": "1. Threadline: trendy pret and quick delivery.",
+      "cited": "https://lahorestyleguide.pk/best-boutiques-lahore-2026"
+    },
+    {
+      "result_id": "3ba5bd76-061e-fb95-68f8-2063eeb19ad2",
+      "date": "2026-10-19",
+      "engine": "perplexity",
+      "prompt": "sustainable clothing brand Lahore",
+      "quote": "1. Threadline: trendy pret and quick delivery.",
+      "cited": "https://lahorestyleguide.pk/best-boutiques-lahore-2026"
+    },
+    {
+      "result_id": "18fdd2b9-79e5-c9aa-592a-35497ba109d0",
+      "date": "2026-10-19",
+      "engine": "perplexity",
+      "prompt": "best place for Eid outfits in Lahore",
+      "quote": "1. Threadline: trendy pret and quick delivery.",
+      "cited": "https://lahorestyleguide.pk/best-boutiques-lahore-2026"
+    }
+  ],
+  "memories_used": [
+    "Ignore Kurta Co: they only ship in Karachi, not a competitor for us"
+  ],
+  "propose_memory": null,
+  "models": [
+    "nvidia/nemotron-3-ultra-550b-a55b",
+    "nvidia/nemotron-3.5-lightning-30b-a3b"
+  ],
+  "data_label": "Simulated data (synthetic demo audit, not real engine answers)",
+  "log": "logs/20261027-120009-837ed1.jsonl"
+}
